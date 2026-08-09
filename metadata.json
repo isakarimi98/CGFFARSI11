@@ -1,0 +1,6 @@
+{
+  "name": "کشف فرصت‌های محتوا - لندینگ پیج افزونه وردپرس",
+  "description": "صفحه معرفی حرفه‌ای و تمیز افزونه وردپرس کشف فرصت‌های محتوا با هوش مصنوعی",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
