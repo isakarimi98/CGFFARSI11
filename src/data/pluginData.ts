@@ -100,7 +100,7 @@ export const SCREENSHOT_SLOTS: ScreenshotSlot[] = [
     title: 'اسکن هوشمند سایت و ساختار محتوایی',
     subtitle: 'نمای آماده‌سازی اسکن یک‌کلیکی عناوین، دسته‌ها و برچسب‌های وردپرس',
     description: 'در این اسکرین‌شات، محیط شروع اسکن هوشمند سایت و تحلیل ساختاری محتوا جهت استخراج فرصت‌های محتوایی نمایش داده می‌شود.',
-    suggestedDimensions: '1920 × 1080 پیکسل',
+    suggestedDimensions: '800 × 800 پیکسل (مربعی)',
     imageUrl: './screenshots/screenshot-1.svg',
   },
   {
@@ -109,7 +109,7 @@ export const SCREENSHOT_SLOTS: ScreenshotSlot[] = [
     title: 'لیست فرصت‌های محتوایی کشف‌شده (فعال)',
     subtitle: 'نمایش شکاف‌های محتوایی به همراه اولویت، دسته‌بندی و دلیل استراتژیک',
     description: 'در این بخش، لیست موضوعات جدید پیشنهادی توسط هوش مصنوعی با درجه اولویت (بالا، متوسط، پایین) و دکمه‌های اقدام سریع قابل مشاهده است.',
-    suggestedDimensions: '1920 × 1080 پیکسل',
+    suggestedDimensions: '800 × 800 پیکسل (مربعی)',
     imageUrl: './screenshots/screenshot-2.svg',
   },
   {
@@ -118,7 +118,7 @@ export const SCREENSHOT_SLOTS: ScreenshotSlot[] = [
     title: 'مدیریت فرصت‌های رد شده و بازگردانی سریع',
     subtitle: 'امکان بازگردانی موضوعات کنار گذاشته شده یا حذف دائمی آنها',
     description: 'در این بخش، فرصت‌های رد شده با امکان بازگردانی یک‌کلیکی به لیست فعال یا حذف کامل مدیریت می‌شوند.',
-    suggestedDimensions: '1920 × 1080 پیکسل',
+    suggestedDimensions: '800 × 800 پیکسل (مربعی)',
     imageUrl: './screenshots/screenshot-3.svg',
   },
   {
@@ -127,7 +127,7 @@ export const SCREENSHOT_SLOTS: ScreenshotSlot[] = [
     title: 'تنظیمات اتصال به سرویس‌های هوش مصنوعی',
     subtitle: 'پیکربندی کلید API، ارائه‌دهنده سرویس (OpenRouter) و انتخاب مدل AI',
     description: 'نمای تنظیمات افزونه جهت انتخاب ارائه‌دهنده هوش مصنوعی، شناسه مدل، کلید اختصاصی API و تست سریع اتصال.',
-    suggestedDimensions: '1920 × 1080 پیکسل',
+    suggestedDimensions: '800 × 800 پیکسل (مربعی)',
     imageUrl: './screenshots/screenshot-4.svg',
   },
   {
@@ -136,7 +136,7 @@ export const SCREENSHOT_SLOTS: ScreenshotSlot[] = [
     title: 'داشبورد آمار و تحلیل دسته‌بندی‌های سایت',
     subtitle: 'کارت‌های آماری، پیشنهاد ویژه امروز و توزیع پوشش موضوعی دسته‌ها',
     description: 'نمای خلاصه آمار فرصت‌ها، پیشنهاد ویژه منتخب با اولویت بالا و وضعیت پوشش پست‌های سایت به تفکیک دسته‌بندی‌ها.',
-    suggestedDimensions: '1920 × 1080 پیکسل',
+    suggestedDimensions: '800 × 800 پیکسل (مربعی)',
     imageUrl: './screenshots/screenshot-5.svg',
   },
 ];

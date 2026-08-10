@@ -76,8 +76,8 @@ export function ScreenshotsShowcase() {
                 </span>
               </div>
 
-              {/* Placeholder Card Body or Custom Image View */}
-              <div className="relative aspect-16/10 bg-slate-100/90 flex flex-col items-center justify-center border-b border-slate-100 overflow-hidden group">
+              {/* Placeholder Card Body or Custom Image View - Fixed 1:1 Square (800x800) */}
+              <div className="relative aspect-square w-full bg-slate-100/90 flex flex-col items-center justify-center border-b border-slate-100 overflow-hidden group">
                 {slot.customImageUrl || slot.imageUrl ? (
                   <>
                     <img
@@ -93,7 +93,7 @@ export function ScreenshotsShowcase() {
                         title="بزرگ‌نمایی"
                       >
                         <Maximize2 className="w-4 h-4" />
-                        <span>مشاهده کامل</span>
+                        <span>مشاهده کامل (۸۰۰×۸۰۰)</span>
                       </button>
                       {slot.customImageUrl && (
                         <button
@@ -196,19 +196,19 @@ export function ScreenshotsShowcase() {
               {activeModalSlot.subtitle} - {activeModalSlot.description}
             </p>
 
-            {/* Display custom image or default screenshot image */}
-            <div className="rounded-2xl bg-slate-900/5 p-2 border border-slate-200 overflow-hidden mb-6 flex flex-col items-center justify-center">
+            {/* Display custom image or default screenshot image in fixed 1:1 Square Frame */}
+            <div className="rounded-2xl bg-slate-900/5 p-3 border border-slate-200 overflow-hidden mb-6 flex flex-col items-center justify-center">
               {activeModalSlot.customImageUrl || activeModalSlot.imageUrl ? (
-                <div className="relative w-full flex flex-col items-center">
+                <div className="relative w-full max-w-[560px] aspect-square mx-auto flex flex-col items-center justify-center bg-white rounded-xl shadow-md border border-slate-200/80 overflow-hidden p-1">
                   <img
                     src={activeModalSlot.customImageUrl || activeModalSlot.imageUrl}
                     alt={activeModalSlot.title}
-                    className="w-full max-h-[65vh] object-contain rounded-xl shadow-md border border-slate-200/80 bg-white"
+                    className="w-full h-full object-contain rounded-lg bg-slate-50"
                   />
                   {activeModalSlot.customImageUrl && (
-                    <p className="text-xs text-emerald-600 font-semibold mt-2.5 flex items-center justify-center gap-1">
+                    <p className="absolute bottom-3 bg-white/95 backdrop-blur-xs px-3 py-1 rounded-full shadow-xs text-xs text-emerald-600 font-semibold border border-emerald-200 flex items-center justify-center gap-1">
                       <CheckCircle2 className="w-4 h-4" />
-                      تصویر سفارشی بارگذاری شد
+                      تصویر سفارشی بارگذاری شد (۸۰۰×۸۰۰)
                     </p>
                   )}
                 </div>
