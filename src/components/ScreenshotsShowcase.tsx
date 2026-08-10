@@ -77,29 +77,33 @@ export function ScreenshotsShowcase() {
               </div>
 
               {/* Placeholder Card Body or Custom Image View */}
-              <div className="relative aspect-16/10 bg-slate-100/90 flex flex-col items-center justify-center p-6 border-b border-slate-100 overflow-hidden group">
-                {slot.customImageUrl ? (
+              <div className="relative aspect-16/10 bg-slate-100/90 flex flex-col items-center justify-center border-b border-slate-100 overflow-hidden group">
+                {slot.customImageUrl || slot.imageUrl ? (
                   <>
                     <img
-                      src={slot.customImageUrl}
+                      src={slot.customImageUrl || slot.imageUrl}
                       alt={slot.title}
-                      className="w-full h-full object-cover rounded"
+                      className="w-full h-full object-cover object-top cursor-pointer transition-transform duration-300 group-hover:scale-[1.02]"
+                      onClick={() => setActiveModalSlot(slot)}
                     />
                     <div className="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3">
                       <button
                         onClick={() => setActiveModalSlot(slot)}
-                        className="p-2.5 rounded-xl bg-white text-slate-900 hover:bg-sky-50 shadow-md transition-colors"
+                        className="p-2.5 rounded-xl bg-white text-slate-900 hover:bg-sky-50 shadow-md transition-colors flex items-center gap-1.5 text-xs font-bold"
                         title="بزرگ‌نمایی"
                       >
-                        <Maximize2 className="w-5 h-5" />
+                        <Maximize2 className="w-4 h-4" />
+                        <span>مشاهده کامل</span>
                       </button>
-                      <button
-                        onClick={() => removeCustomImage(slot.id)}
-                        className="p-2.5 rounded-xl bg-rose-600 text-white hover:bg-rose-700 shadow-md transition-colors"
-                        title="حذف تصویر"
-                      >
-                        <X className="w-5 h-5" />
-                      </button>
+                      {slot.customImageUrl && (
+                        <button
+                          onClick={() => removeCustomImage(slot.id)}
+                          className="p-2.5 rounded-xl bg-rose-600 text-white hover:bg-rose-700 shadow-md transition-colors"
+                          title="حذف تصویر بارگذاری‌شده"
+                        >
+                          <X className="w-4 h-4" />
+                        </button>
+                      )}
                     </div>
                   </>
                 ) : (
@@ -167,47 +171,49 @@ export function ScreenshotsShowcase() {
 
       {/* Lightbox / Modal for Slot Details */}
       {activeModalSlot && (
-        <div className="fixed inset-0 z-50 bg-slate-900/80 backdrop-blur-xs flex items-center justify-center p-4">
-          <div className="bg-white rounded-3xl max-w-3xl w-full p-6 sm:p-8 shadow-2xl border border-slate-200 relative animate-in fade-in zoom-in-95">
+        <div className="fixed inset-0 z-50 bg-slate-900/85 backdrop-blur-xs flex items-center justify-center p-4">
+          <div className="bg-white rounded-3xl max-w-5xl w-full p-6 sm:p-8 shadow-2xl border border-slate-200 relative animate-in fade-in zoom-in-95 max-h-[92vh] flex flex-col overflow-y-auto">
             <button
               onClick={() => setActiveModalSlot(null)}
-              className="absolute top-5 left-5 p-2 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 transition-colors"
+              className="absolute top-5 left-5 p-2 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 transition-colors z-10"
             >
               <X className="w-5 h-5" />
             </button>
 
-            <div className="flex items-center gap-3 mb-4">
+            <div className="flex items-center gap-3 mb-3">
               <span className="px-3 py-1 rounded-full bg-sky-100 text-sky-800 text-xs font-bold">
-                جایگاه اسکرین‌شات شماره {activeModalSlot.slotNumber}
+                تصویر محیط افزونه - جایگاه شماره {activeModalSlot.slotNumber}
               </span>
               <span className="text-xs text-slate-400">
-                ابعاد پیشنهادی: {activeModalSlot.suggestedDimensions}
+                ابعاد: {activeModalSlot.suggestedDimensions}
               </span>
             </div>
 
-            <h3 className="text-2xl font-bold text-slate-900 mb-2">
+            <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-1">
               {activeModalSlot.title}
             </h3>
-            <p className="text-sm text-slate-600 mb-6">
-              {activeModalSlot.description}
+            <p className="text-xs sm:text-sm text-slate-600 mb-5">
+              {activeModalSlot.subtitle} - {activeModalSlot.description}
             </p>
 
-            {/* Display custom image or clean upload zone inside modal */}
-            <div className="border-2 border-dashed border-sky-200 rounded-2xl bg-slate-50 p-6 text-center min-h-[300px] flex flex-col items-center justify-center mb-6">
-              {activeModalSlot.customImageUrl ? (
-                <div className="relative w-full h-full">
+            {/* Display custom image or default screenshot image */}
+            <div className="rounded-2xl bg-slate-900/5 p-2 border border-slate-200 overflow-hidden mb-6 flex flex-col items-center justify-center">
+              {activeModalSlot.customImageUrl || activeModalSlot.imageUrl ? (
+                <div className="relative w-full flex flex-col items-center">
                   <img
-                    src={activeModalSlot.customImageUrl}
+                    src={activeModalSlot.customImageUrl || activeModalSlot.imageUrl}
                     alt={activeModalSlot.title}
-                    className="max-h-[400px] mx-auto object-contain rounded-xl shadow-md"
+                    className="w-full max-h-[65vh] object-contain rounded-xl shadow-md border border-slate-200/80 bg-white"
                   />
-                  <p className="text-xs text-emerald-600 font-semibold mt-3 flex items-center justify-center gap-1">
-                    <CheckCircle2 className="w-4 h-4" />
-                    تصویر واقعی بارگذاری شد
-                  </p>
+                  {activeModalSlot.customImageUrl && (
+                    <p className="text-xs text-emerald-600 font-semibold mt-2.5 flex items-center justify-center gap-1">
+                      <CheckCircle2 className="w-4 h-4" />
+                      تصویر سفارشی بارگذاری شد
+                    </p>
+                  )}
                 </div>
               ) : (
-                <div>
+                <div className="p-10 text-center">
                   <div className="w-16 h-16 rounded-2xl bg-sky-100 text-sky-600 flex items-center justify-center mx-auto mb-4 border border-sky-200">
                     <Upload className="w-8 h-8" />
                   </div>
@@ -231,10 +237,21 @@ export function ScreenshotsShowcase() {
               )}
             </div>
 
-            <div className="flex justify-end gap-3 pt-4 border-t border-slate-100">
+            <div className="flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-slate-100">
+              <label className="cursor-pointer inline-flex items-center gap-2 text-xs text-sky-700 hover:text-sky-900 font-bold px-3 py-2 rounded-xl bg-sky-50 border border-sky-200/80 transition-colors">
+                <Upload className="w-4 h-4 text-sky-600" />
+                <span>بارگذاری / جایگزینی تصویر این بخش</span>
+                <input
+                  type="file"
+                  accept="image/*"
+                  className="hidden"
+                  onChange={(e) => handleImageUpload(activeModalSlot.id, e)}
+                />
+              </label>
+
               <button
                 onClick={() => setActiveModalSlot(null)}
-                className="px-5 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-semibold transition-colors"
+                className="px-6 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-sm font-semibold transition-colors"
               >
                 بستن
               </button>

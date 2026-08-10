@@ -1,0 +1,257 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&amp;display=swap');
+      text { font-family: 'Vazirmatn', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; direction: rtl; unicode-bidi: embed; }
+      .bg-app { fill: #f0f2f5; }
+      .card { fill: #ffffff; stroke: #cbd5e1; stroke-width: 1; rx: 8px; }
+      .p-blue { fill: #2563eb; }
+      .p-red { fill: #dc2626; }
+      .p-green { fill: #16a34a; }
+      .badge-prio-high { fill: #fce7f3; stroke: #f472b6; stroke-width: 0.5; }
+      .badge-prio-mid { fill: #fef9c3; stroke: #fde047; stroke-width: 0.5; }
+      .badge-prio-low { fill: #eff6ff; stroke: #bfdbfe; stroke-width: 0.5; }
+      .pill-cat { fill: #e0f2fe; stroke: #bae6fd; stroke-width: 0.5; }
+      .pill-kw { fill: #f1f5f9; stroke: #e2e8f0; stroke-width: 0.5; }
+    </style>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="680" class="bg-app"/>
+
+  <!-- Top Header Bar -->
+  <rect x="20" y="20" width="1160" height="90" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" rx="8" filter="url(#shadow)"/>
+  
+  <!-- Left Header Disabled Action Button -->
+  <g transform="translate(40, 38)">
+    <rect width="210" height="42" fill="#e2e8f0" rx="6"/>
+    <text x="180" y="26" fill="#94a3b8" font-size="12.5" font-weight="700" text-anchor="start">اسکن سایت برای یافتن شکاف‌های محتوا</text>
+    <path d="M22 28l-4-4m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke="#94a3b8" stroke-width="2" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Right Header Info -->
+  <g transform="translate(1140, 48)">
+    <text x="0" y="0" fill="#0f172a" font-size="18" font-weight="800" text-anchor="end">🔍 کشف فرصت‌های محتوا</text>
+    <circle cx="-185" cy="-6" r="4" fill="#22c55e"/>
+    <text x="-195" y="0" fill="#16a34a" font-size="11" font-weight="700" text-anchor="end">ارتباط هوش مصنوعی: آنلاین (OPENROUTER)</text>
+    <text x="0" y="24" fill="#64748b" font-size="12" font-weight="500" text-anchor="end">تحلیل هوشمند ساختار پست‌ها، دسته‌بندی‌ها و کلیدواژه‌های سایت جهت استخراج فرصت‌ها و موضوعات غایب.</text>
+  </g>
+
+  <!-- Tabs Bar -->
+  <g transform="translate(20, 125)">
+    <!-- Active Tab: Active Opportunities (5) -->
+    <g transform="translate(1000, 0)">
+      <rect width="160" height="38" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" rx="6 6 0 0"/>
+      <text x="140" y="24" fill="#0f172a" font-size="13" font-weight="800" text-anchor="end">فرصت‌های فعال</text>
+      <rect x="15" y="8" width="22" height="22" rx="11" fill="#2563eb"/>
+      <text x="26" y="23" fill="#ffffff" font-size="12" font-weight="800" text-anchor="middle">5</text>
+    </g>
+
+    <!-- Tab: Approved Opportunities (1) -->
+    <g transform="translate(830, 0)">
+      <rect width="160" height="38" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1" rx="6 6 0 0"/>
+      <text x="140" y="24" fill="#475569" font-size="13" font-weight="600" text-anchor="end">فرصت‌های تایید شده</text>
+      <circle cx="26" cy="19" r="11" fill="#16a34a"/>
+      <text x="26" y="23" fill="#ffffff" font-size="11" font-weight="800" text-anchor="middle">✓ 1</text>
+    </g>
+
+    <!-- Tab: Rejected Opportunities (9) -->
+    <g transform="translate(660, 0)">
+      <rect width="160" height="38" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1" rx="6 6 0 0"/>
+      <text x="140" y="24" fill="#475569" font-size="13" font-weight="600" text-anchor="end">فرصت‌های رد شده</text>
+      <circle cx="26" cy="19" r="11" fill="#dc2626"/>
+      <text x="26" y="23" fill="#ffffff" font-size="11" font-weight="800" text-anchor="middle">✕ 9</text>
+    </g>
+    <line x1="0" y1="38" x2="1160" y2="38" stroke="#cbd5e1" stroke-width="1"/>
+  </g>
+
+  <!-- Toolbar: Search & Exports -->
+  <g transform="translate(20, 175)">
+    <!-- Right Search Input -->
+    <rect x="800" y="0" width="360" height="38" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" rx="6"/>
+    <text x="1145" y="24" fill="#94a3b8" font-size="12" font-weight="500" text-anchor="end">🔍 جستجو در عنوان، کلمات کلیدی، دسته‌بندی یا دلیل استراتژیک...</text>
+
+    <!-- Left Export Buttons -->
+    <text x="180" y="24" fill="#475569" font-size="12" font-weight="700" text-anchor="end">خروجی گرفتن:</text>
+
+    <rect x="75" y="2" width="90" height="34" fill="#ffffff" stroke="#2563eb" stroke-width="1" rx="5"/>
+    <text x="120" y="23" fill="#2563eb" font-size="12" font-weight="700" text-anchor="middle">📥 دانلود CSV</text>
+
+    <rect x="-25" y="2" width="90" height="34" fill="#ffffff" stroke="#2563eb" stroke-width="1" rx="5"/>
+    <text x="20" y="23" fill="#2563eb" font-size="12" font-weight="700" text-anchor="middle">💾 دانلود JSON</text>
+  </g>
+
+  <!-- Main Table Container -->
+  <rect x="20" y="225" width="1160" height="435" class="card" filter="url(#shadow)"/>
+
+  <!-- Table Header -->
+  <rect x="20" y="225" width="1160" height="42" fill="#f8fafc" rx="8 8 0 0"/>
+  <line x1="20" y1="267" x2="1180" y2="267" stroke="#e2e8f0" stroke-width="1"/>
+
+  <g transform="translate(0, 252)">
+    <text x="1150" y="0" fill="#334155" font-size="13" font-weight="800" text-anchor="end">عنوان / موضوع</text>
+    <text x="910" y="0" fill="#334155" font-size="13" font-weight="800" text-anchor="end">کلمات کلیدی هدف</text>
+    <text x="710" y="0" fill="#334155" font-size="13" font-weight="800" text-anchor="end">دسته‌بندی محتوا</text>
+    <text x="575" y="0" fill="#334155" font-size="13" font-weight="800" text-anchor="end">اولویت</text>
+    <text x="475" y="0" fill="#334155" font-size="13" font-weight="800" text-anchor="end">دلیل استراتژیک</text>
+    <text x="110" y="0" fill="#334155" font-size="13" font-weight="800" text-anchor="end">عملیات</text>
+  </g>
+
+  <!-- Row 1 -->
+  <g transform="translate(0, 275)">
+    <line x1="20" y1="70" x2="1180" y2="70" stroke="#f1f5f9" stroke-width="1"/>
+    <!-- Title -->
+    <text x="1150" y="28" fill="#0f172a" font-size="12.5" font-weight="700" text-anchor="end">نکات کلیدی برای انتخاب بهترین زمان سفر به کویر</text>
+    
+    <!-- Keywords -->
+    <rect x="850" y="14" width="70" height="22" class="pill-kw" rx="11"/>
+    <text x="885" y="29" fill="#475569" font-size="10.5" font-weight="600" text-anchor="middle">کویرنوردی</text>
+
+    <rect x="765" y="14" width="80" height="22" class="pill-kw" rx="11"/>
+    <text x="805" y="29" fill="#475569" font-size="10.5" font-weight="600" text-anchor="middle">زمان مناسب سفر</text>
+
+    <rect x="685" y="14" width="75" height="22" class="pill-kw" rx="11"/>
+    <text x="722" y="29" fill="#475569" font-size="10.5" font-weight="600" text-anchor="middle">سفر به کویر</text>
+
+    <!-- Category -->
+    <rect x="585" y="14" width="90" height="22" class="pill-cat" rx="11"/>
+    <text x="630" y="29" fill="#0369a1" font-size="11" font-weight="700" text-anchor="middle">مقاصد گردشگری</text>
+
+    <!-- Priority -->
+    <rect x="500" y="14" width="70" height="22" class="badge-prio-high" rx="11"/>
+    <text x="535" y="29" fill="#9d174d" font-size="11" font-weight="800" text-anchor="middle">بالا (فوری)</text>
+
+    <!-- Strategic Reason -->
+    <text x="475" y="22" fill="#475569" font-size="11" font-weight="500" text-anchor="end">این موضوع به دلیل اهمیت زمان‌بندی در سفر به کویر و تأثیر آن بر تجربه</text>
+    <text x="475" y="42" fill="#475569" font-size="11" font-weight="500" text-anchor="end">گردشگری یک ضرورت است. اطلاعات دقیق در مورد بهترین زمان‌ها...</text>
+
+    <!-- Actions -->
+    <rect x="80" y="14" width="45" height="28" fill="#2563eb" rx="5"/>
+    <text x="102" y="32" fill="#ffffff" font-size="11" font-weight="700" text-anchor="middle">تایید ✓</text>
+
+    <rect x="30" y="14" width="45" height="28" fill="#dc2626" rx="5"/>
+    <text x="52" y="32" fill="#ffffff" font-size="11" font-weight="700" text-anchor="middle">رد ✕</text>
+  </g>
+
+  <!-- Row 2 -->
+  <g transform="translate(0, 350)">
+    <line x1="20" y1="70" x2="1180" y2="70" stroke="#f1f5f9" stroke-width="1"/>
+    <text x="1150" y="28" fill="#0f172a" font-size="12.5" font-weight="700" text-anchor="end">آموزش ساخت ابزارهای بقا با استفاده از منابع طبیعی</text>
+    
+    <rect x="850" y="14" width="70" height="22" class="pill-kw" rx="11"/>
+    <text x="885" y="29" fill="#475569" font-size="10.5" font-weight="600" text-anchor="middle">ابزار بقا</text>
+
+    <rect x="765" y="14" width="80" height="22" class="pill-kw" rx="11"/>
+    <text x="805" y="29" fill="#475569" font-size="10.5" font-weight="600" text-anchor="middle">منابع طبیعی</text>
+
+    <rect x="685" y="14" width="75" height="22" class="pill-kw" rx="11"/>
+    <text x="722" y="29" fill="#475569" font-size="10.5" font-weight="600" text-anchor="middle">بقا در طبیعت</text>
+
+    <rect x="585" y="14" width="90" height="22" class="pill-cat" rx="11"/>
+    <text x="630" y="29" fill="#0369a1" font-size="11" font-weight="700" text-anchor="middle">بقا در طبیعت</text>
+
+    <rect x="500" y="14" width="60" height="22" class="badge-prio-mid" rx="11"/>
+    <text x="530" y="29" fill="#854d0e" font-size="11" font-weight="800" text-anchor="middle">متوسط</text>
+
+    <text x="475" y="22" fill="#475569" font-size="11" font-weight="500" text-anchor="end">این موضوع می‌تواند به افرادی که به بقا در طبیعت علاقه دارند</text>
+    <text x="475" y="42" fill="#475569" font-size="11" font-weight="500" text-anchor="end">آموزش‌های مفیدی ارائه دهد و به غنای محتوای موجود کمک کند.</text>
+
+    <rect x="80" y="14" width="45" height="28" fill="#2563eb" rx="5"/>
+    <text x="102" y="32" fill="#ffffff" font-size="11" font-weight="700" text-anchor="middle">تایید ✓</text>
+
+    <rect x="30" y="14" width="45" height="28" fill="#dc2626" rx="5"/>
+    <text x="52" y="32" fill="#ffffff" font-size="11" font-weight="700" text-anchor="middle">رد ✕</text>
+  </g>
+
+  <!-- Row 3 -->
+  <g transform="translate(0, 425)">
+    <line x1="20" y1="70" x2="1180" y2="70" stroke="#f1f5f9" stroke-width="1"/>
+    <text x="1150" y="28" fill="#0f172a" font-size="12.5" font-weight="700" text-anchor="end">راهنمای انتخاب بهترین زمان برای سفر به جنگل‌های شمال ایران</text>
+    
+    <rect x="850" y="14" width="75" height="22" class="pill-kw" rx="11"/>
+    <text x="887" y="29" fill="#475569" font-size="10.5" font-weight="600" text-anchor="middle">جنگل‌نوردی</text>
+
+    <rect x="765" y="14" width="80" height="22" class="pill-kw" rx="11"/>
+    <text x="805" y="29" fill="#475569" font-size="10.5" font-weight="600" text-anchor="middle">زمان سفر</text>
+
+    <rect x="685" y="14" width="75" height="22" class="pill-kw" rx="11"/>
+    <text x="722" y="29" fill="#475569" font-size="10.5" font-weight="600" text-anchor="middle">سفر به جنگل</text>
+
+    <rect x="585" y="14" width="90" height="22" class="pill-cat" rx="11"/>
+    <text x="630" y="29" fill="#0369a1" font-size="11" font-weight="700" text-anchor="middle">مقاصد گردشگری</text>
+
+    <rect x="500" y="14" width="60" height="22" class="badge-prio-mid" rx="11"/>
+    <text x="530" y="29" fill="#854d0e" font-size="11" font-weight="800" text-anchor="middle">متوسط</text>
+
+    <text x="475" y="22" fill="#475569" font-size="11" font-weight="500" text-anchor="end">در راستای تقویت بخش مقاصد گردشگری، بررسی زمان‌های مناسب برای</text>
+    <text x="475" y="42" fill="#475569" font-size="11" font-weight="500" text-anchor="end">سفر به جنگل‌های شمال ایران می‌تواند مخاطبان را به سمت انتخاب این...</text>
+
+    <rect x="80" y="14" width="45" height="28" fill="#2563eb" rx="5"/>
+    <text x="102" y="32" fill="#ffffff" font-size="11" font-weight="700" text-anchor="middle">تایید ✓</text>
+
+    <rect x="30" y="14" width="45" height="28" fill="#dc2626" rx="5"/>
+    <text x="52" y="32" fill="#ffffff" font-size="11" font-weight="700" text-anchor="middle">رد ✕</text>
+  </g>
+
+  <!-- Row 4 -->
+  <g transform="translate(0, 500)">
+    <line x1="20" y1="70" x2="1180" y2="70" stroke="#f1f5f9" stroke-width="1"/>
+    <text x="1150" y="28" fill="#0f172a" font-size="12.5" font-weight="700" text-anchor="end">نکات مهم در مورد کمپینگ در مناطق کوهستانی</text>
+    
+    <rect x="850" y="14" width="80" height="22" class="pill-kw" rx="11"/>
+    <text x="890" y="29" fill="#475569" font-size="10.5" font-weight="600" text-anchor="middle">تجهیزات کمپ</text>
+
+    <rect x="750" y="14" width="95" height="22" class="pill-kw" rx="11"/>
+    <text x="797" y="29" fill="#475569" font-size="10.5" font-weight="600" text-anchor="middle">مناطق کوهستانی</text>
+
+    <rect x="685" y="14" width="60" height="22" class="pill-kw" rx="11"/>
+    <text x="715" y="29" fill="#475569" font-size="10.5" font-weight="600" text-anchor="middle">کمپینگ</text>
+
+    <rect x="585" y="14" width="90" height="22" class="pill-cat" rx="11"/>
+    <text x="630" y="29" fill="#0369a1" font-size="11" font-weight="700" text-anchor="middle">بقا در طبیعت</text>
+
+    <rect x="500" y="14" width="55" height="22" class="badge-prio-low" rx="11"/>
+    <text x="527" y="29" fill="#1e40af" font-size="11" font-weight="800" text-anchor="middle">پایین</text>
+
+    <text x="475" y="22" fill="#475569" font-size="11" font-weight="500" text-anchor="end">این موضوع به عنوان یک راهنمای خاص برای کسانی که به کمپینگ در</text>
+    <text x="475" y="42" fill="#475569" font-size="11" font-weight="500" text-anchor="end">مناطق کوهستانی علاقه دارند، می‌تواند مفید باشد اما به دلیل...</text>
+
+    <rect x="80" y="14" width="45" height="28" fill="#2563eb" rx="5"/>
+    <text x="102" y="32" fill="#ffffff" font-size="11" font-weight="700" text-anchor="middle">تایید ✓</text>
+
+    <rect x="30" y="14" width="45" height="28" fill="#dc2626" rx="5"/>
+    <text x="52" y="32" fill="#ffffff" font-size="11" font-weight="700" text-anchor="middle">رد ✕</text>
+  </g>
+
+  <!-- Row 5 -->
+  <g transform="translate(0, 575)">
+    <text x="1150" y="28" fill="#0f172a" font-size="12.5" font-weight="700" text-anchor="end">نکات اساسی برای عکاسی از پرندگان در طبیعت</text>
+    
+    <rect x="840" y="14" width="95" height="22" class="pill-kw" rx="11"/>
+    <text x="887" y="29" fill="#475569" font-size="10.5" font-weight="600" text-anchor="middle">تکنیک‌های عکاسی</text>
+
+    <rect x="740" y="14" width="95" height="22" class="pill-kw" rx="11"/>
+    <text x="787" y="29" fill="#475569" font-size="10.5" font-weight="600" text-anchor="middle">عکاسی پرندگان</text>
+
+    <rect x="665" y="14" width="70" height="22" class="pill-kw" rx="11"/>
+    <text x="700" y="29" fill="#475569" font-size="10.5" font-weight="600" text-anchor="middle">عکاسی طبیعت</text>
+
+    <rect x="555" y="14" width="105" height="22" class="pill-cat" rx="11"/>
+    <text x="607" y="29" fill="#0369a1" font-size="11" font-weight="700" text-anchor="middle">تکنیک‌های طبیعت‌گردی</text>
+
+    <rect x="490" y="14" width="55" height="22" class="badge-prio-low" rx="11"/>
+    <text x="517" y="29" fill="#1e40af" font-size="11" font-weight="800" text-anchor="middle">پایین</text>
+
+    <text x="475" y="22" fill="#475569" font-size="11" font-weight="500" text-anchor="end">این موضوع به عنوان یک زیرمجموعه خاص از عکاسی در طبیعت</text>
+    <text x="475" y="42" fill="#475569" font-size="11" font-weight="500" text-anchor="end">می‌تواند به جذب عکاسان و علاقه‌مندان به طبیعت کمک کند...</text>
+
+    <rect x="80" y="14" width="45" height="28" fill="#2563eb" rx="5"/>
+    <text x="102" y="32" fill="#ffffff" font-size="11" font-weight="700" text-anchor="middle">تایید ✓</text>
+
+    <rect x="30" y="14" width="45" height="28" fill="#dc2626" rx="5"/>
+    <text x="52" y="32" fill="#ffffff" font-size="11" font-weight="700" text-anchor="middle">رد ✕</text>
+  </g>
+</svg>

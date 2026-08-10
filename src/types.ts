@@ -22,6 +22,7 @@ export interface ScreenshotSlot {
   slotNumber: string;
   aspectRatio?: string;
   suggestedDimensions: string;
+  imageUrl?: string;
   customImageUrl?: string;
 }
 
