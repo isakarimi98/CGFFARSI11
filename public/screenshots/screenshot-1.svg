@@ -1,65 +1,196 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 960" width="100%" height="100%">
   <defs>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&amp;display=swap');
       text { font-family: 'Vazirmatn', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; direction: rtl; unicode-bidi: embed; }
-      .bg-app { fill: #f8fafc; }
-      .card { fill: #ffffff; stroke: #cbd5e1; stroke-width: 1; rx: 12px; }
-      .btn-blue { fill: #2563eb; rx: 8px; }
+      .bg-app { fill: #f1f3f5; }
+      .card { fill: #ffffff; stroke: #d1d5db; stroke-width: 1; rx: 8px; }
+      .btn-blue { fill: #2563eb; rx: 6px; }
+      .btn-gold { fill: #d97706; rx: 6px; }
+      .badge-prio-high { fill: #fce7f3; stroke: #f472b6; stroke-width: 0.5; }
+      .badge-cat { fill: #e0f2fe; stroke: #bae6fd; stroke-width: 0.5; }
+      .progress-bg { fill: #e5e7eb; rx: 3px; }
+      .progress-fill { fill: #2563eb; rx: 3px; }
     </style>
-    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
-      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08"/>
+    <filter id="shadow" x="-3%" y="-3%" width="106%" height="106%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.06"/>
     </filter>
   </defs>
 
   <!-- Background -->
-  <rect width="800" height="800" class="bg-app"/>
+  <rect width="1000" height="960" class="bg-app"/>
 
-  <!-- Top Header Bar -->
-  <rect x="24" y="24" width="752" height="110" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" rx="12" filter="url(#shadow)"/>
+  <!-- Header Bar -->
+  <rect x="16" y="16" width="968" height="95" fill="#ffffff" stroke="#d1d5db" stroke-width="1" rx="8" filter="url(#shadow)"/>
   
-  <g transform="translate(48, 52)">
-    <rect width="210" height="50" class="btn-blue"/>
-    <text x="180" y="31" fill="#ffffff" font-size="13" font-weight="700" text-anchor="start">اسکن سایت برای یافتن شکاف‌ها 🔍</text>
+  <!-- Left Button in Header -->
+  <g transform="translate(36, 38)">
+    <rect width="165" height="42" class="btn-blue"/>
+    <text x="138" y="26" fill="#ffffff" font-size="13" font-weight="700" text-anchor="start">کشف فرصت‌های جدید 🔍</text>
   </g>
 
-  <g transform="translate(748, 62)">
-    <text x="0" y="0" fill="#0f172a" font-size="20" font-weight="800" text-anchor="end">🔍 کشف فرصت‌های محتوا</text>
-    <circle cx="-190" cy="-6" r="4" fill="#22c55e"/>
-    <text x="-200" y="0" fill="#16a34a" font-size="12" font-weight="700" text-anchor="end">ارتباط هوش مصنوعی: آنلاین</text>
-    <text x="0" y="28" fill="#64748b" font-size="12" font-weight="500" text-anchor="end">تحلیل هوشمند ساختار پست‌ها، دسته‌بندی‌ها و کلیدواژه‌های سایت جهت استخراج موضوعات.</text>
+  <!-- Right Title in Header -->
+  <g transform="translate(952, 48)">
+    <text x="0" y="0" fill="#0f172a" font-size="19" font-weight="800" text-anchor="end">🛣️ داشبورد کشف فرصت‌های محتوا</text>
+    <text x="0" y="25" fill="#64748b" font-size="12" font-weight="500" text-anchor="end">خلاصه وضعیت، آمارهای کلیدی و تحلیل دسته‌بندی‌های محتوایی سایت</text>
   </g>
 
-  <!-- Tabs Bar -->
-  <g transform="translate(24, 160)">
-    <rect x="520" y="0" width="232" height="42" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" rx="8 8 0 0"/>
-    <text x="730" y="26" fill="#0f172a" font-size="13" font-weight="800" text-anchor="end">فرصت‌های فعال (0)</text>
-
-    <rect x="270" y="0" width="232" height="42" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1" rx="8 8 0 0"/>
-    <text x="480" y="26" fill="#64748b" font-size="13" font-weight="600" text-anchor="end">فرصت‌های تایید شده (1)</text>
-
-    <rect x="20" y="0" width="232" height="42" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1" rx="8 8 0 0"/>
-    <text x="230" y="26" fill="#64748b" font-size="13" font-weight="600" text-anchor="end">فرصت‌های رد شده (9)</text>
-
-    <line x1="0" y1="42" x2="752" y2="42" stroke="#cbd5e1" stroke-width="1"/>
-  </g>
-
-  <!-- Main Scan Card Area -->
-  <rect x="24" y="230" width="752" height="546" class="card" filter="url(#shadow)"/>
-
-  <!-- Center Bulb & Message -->
-  <g transform="translate(400, 430)">
-    <circle cx="0" cy="-60" r="42" fill="#eff6ff" stroke="#bfdbfe" stroke-width="2"/>
-    <text x="0" y="-48" font-size="36" text-anchor="middle">💡</text>
-
-    <text x="0" y="20" fill="#1e293b" font-size="17" font-weight="800" text-anchor="middle">آماده‌سازی اسکن هوشمند سایت</text>
-    <text x="0" y="50" fill="#64748b" font-size="13" font-weight="500" text-anchor="middle">برای تحلیل ساختار سایت و کشف فرصت‌ها و شکاف‌های محتوایی جدید،</text>
-    <text x="0" y="75" fill="#64748b" font-size="13" font-weight="500" text-anchor="middle">لطفاً روی دکمه زیر کلیک کنید.</text>
-
-    <!-- Center Scan Button -->
-    <g transform="translate(-130, 110)">
-      <rect width="260" height="52" fill="#2563eb" rx="10" filter="url(#shadow)"/>
-      <text x="130" y="32" fill="#ffffff" font-size="15" font-weight="800" text-anchor="middle">شروع اسکن هوشمند محتوای سایت 🔍</text>
+  <!-- 5 Stat Cards Row -->
+  <g transform="translate(16, 128)">
+    <!-- Card 1: Discovered (15) -->
+    <g transform="translate(780, 0)">
+      <rect width="188" height="110" class="card" filter="url(#shadow)"/>
+      <text x="168" y="30" fill="#64748b" font-size="11.5" font-weight="700" text-anchor="end">فرصت‌های کشف‌شده</text>
+      <text x="24" y="32" fill="#0284c7" font-size="18">💡</text>
+      <text x="94" y="68" fill="#0f172a" font-size="28" font-weight="800" text-anchor="middle">15</text>
+      <text x="168" y="66" fill="#64748b" font-size="11" font-weight="600" text-anchor="end">موضوع</text>
+      <text x="168" y="92" fill="#94a3b8" font-size="10" font-weight="500" text-anchor="end">کل فرصت‌های شناسایی‌شده</text>
     </g>
+
+    <!-- Card 2: Pending (5) -->
+    <g transform="translate(585, 0)">
+      <rect width="188" height="110" class="card" filter="url(#shadow)"/>
+      <text x="168" y="30" fill="#64748b" font-size="11.5" font-weight="700" text-anchor="end">در انتظار بررسی</text>
+      <text x="24" y="32" fill="#d97706" font-size="18">🕒</text>
+      <text x="94" y="68" fill="#0f172a" font-size="28" font-weight="800" text-anchor="middle">5</text>
+      <text x="168" y="66" fill="#64748b" font-size="11" font-weight="600" text-anchor="end">موضوع</text>
+      <text x="168" y="92" fill="#94a3b8" font-size="10" font-weight="500" text-anchor="end">نیازمند تعیین تکلیف</text>
+    </g>
+
+    <!-- Card 3: Approved (1) -->
+    <g transform="translate(390, 0)">
+      <rect width="188" height="110" class="card" filter="url(#shadow)"/>
+      <text x="168" y="30" fill="#64748b" font-size="11.5" font-weight="700" text-anchor="end">تأیید شده</text>
+      <text x="24" y="32" fill="#16a34a" font-size="18">✓</text>
+      <text x="94" y="68" fill="#0f172a" font-size="28" font-weight="800" text-anchor="middle">1</text>
+      <text x="168" y="66" fill="#64748b" font-size="11" font-weight="600" text-anchor="end">موضوع</text>
+      <text x="168" y="92" fill="#16a34a" font-size="10" font-weight="600" text-anchor="end">آماده تولید محتوا</text>
+    </g>
+
+    <!-- Card 4: Rejected (9) -->
+    <g transform="translate(195, 0)">
+      <rect width="188" height="110" class="card" filter="url(#shadow)"/>
+      <text x="168" y="30" fill="#64748b" font-size="11.5" font-weight="700" text-anchor="end">رد شده</text>
+      <text x="24" y="32" fill="#dc2626" font-size="18">✕</text>
+      <text x="94" y="68" fill="#0f172a" font-size="28" font-weight="800" text-anchor="middle">9</text>
+      <text x="168" y="66" fill="#64748b" font-size="11" font-weight="600" text-anchor="end">موضوع</text>
+      <text x="168" y="92" fill="#94a3b8" font-size="10" font-weight="500" text-anchor="end">کنار گذاشته شده</text>
+    </g>
+
+    <!-- Card 5: Published / Draft (1) -->
+    <g transform="translate(0, 0)">
+      <rect width="188" height="110" class="card" filter="url(#shadow)"/>
+      <text x="168" y="30" fill="#64748b" font-size="10.5" font-weight="700" text-anchor="end">منتشر شده / پیش‌نویس</text>
+      <text x="20" y="32" fill="#6b21a8" font-size="18">📄</text>
+      <text x="94" y="68" fill="#0f172a" font-size="28" font-weight="800" text-anchor="middle">1</text>
+      <text x="168" y="66" fill="#64748b" font-size="11" font-weight="600" text-anchor="end">مقاله</text>
+      <text x="168" y="92" fill="#6b21a8" font-size="10" font-weight="600" text-anchor="end">تبدیل‌شده به پیش‌نویس</text>
+    </g>
+  </g>
+
+  <!-- Today's Special Recommendation Card -->
+  <g transform="translate(16, 255)">
+    <rect width="968" height="105" fill="#fefce8" stroke="#fef08a" stroke-width="1.5" rx="8" filter="url(#shadow)"/>
+    
+    <!-- Ribbon Top Left -->
+    <rect x="848" y="0" width="120" height="24" fill="#ca8a04" rx="8 0 8 0"/>
+    <text x="908" y="16" fill="#ffffff" font-size="11" font-weight="800" text-anchor="middle">★ پیشنهاد ویژه امروز</text>
+
+    <!-- Main Title Info -->
+    <g transform="translate(936, 52)">
+      <text x="0" y="0" fill="#854d0e" font-size="12" font-weight="700" text-anchor="end">🎗️ فرصت محتوایی منتخب با اولویت بالا</text>
+      <text x="0" y="26" fill="#0f172a" font-size="17" font-weight="800" text-anchor="end">نکات کلیدی برای انتخاب بهترین زمان سفر به کویر</text>
+    </g>
+
+    <!-- Badges -->
+    <g transform="translate(560, 65)">
+      <rect x="0" y="0" width="75" height="22" class="badge-prio-high" rx="11"/>
+      <text x="37" y="15" fill="#9d174d" font-size="11" font-weight="800" text-anchor="middle">اولویت بالا</text>
+
+      <rect x="85" y="0" width="135" height="22" class="badge-cat" rx="11"/>
+      <text x="152" y="15" fill="#0369a1" font-size="11" font-weight="700" text-anchor="middle">دسته‌بندی: مقاصد گردشگری</text>
+    </g>
+
+    <!-- Action Button Left -->
+    <g transform="translate(28, 30)">
+      <rect width="125" height="44" class="btn-gold"/>
+      <text x="62" y="27" fill="#ffffff" font-size="13" font-weight="800" text-anchor="middle">بررسی و اقدام ➔</text>
+    </g>
+  </g>
+
+  <!-- Categories Table Section -->
+  <rect x="16" y="378" width="968" height="562" class="card" filter="url(#shadow)"/>
+
+  <!-- Table Title Bar -->
+  <g transform="translate(948, 412)">
+    <text x="0" y="0" fill="#0f172a" font-size="16" font-weight="800" text-anchor="end">📁 دسته‌بندی موضوعی سایت</text>
+    <rect x="-110" y="-18" width="100" height="22" fill="#f1f5f9" rx="11"/>
+    <text x="-60" y="-3" fill="#475569" font-size="11" font-weight="700" text-anchor="middle">5 دسته‌بندی فعال</text>
+    <text x="0" y="24" fill="#64748b" font-size="12" font-weight="500" text-anchor="end">توزیع پست‌های منتشرشده سایت و فرصت‌های محتوایی کشف‌شده به تفکیک دسته‌بندی‌های موضوعی:</text>
+  </g>
+
+  <!-- Table Header -->
+  <rect x="16" y="458" width="968" height="42" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <g transform="translate(0, 484)">
+    <text x="948" y="0" fill="#334155" font-size="12.5" font-weight="800" text-anchor="end">عنوان دسته‌بندی</text>
+    <text x="680" y="0" fill="#334155" font-size="12.5" font-weight="800" text-anchor="end">پست‌های منتشرشده سایت</text>
+    <text x="480" y="0" fill="#334155" font-size="12.5" font-weight="800" text-anchor="end">فرصت‌های کشف‌شده</text>
+    <text x="310" y="0" fill="#334155" font-size="12.5" font-weight="800" text-anchor="end">فرصت‌های تأییدشده</text>
+    <text x="120" y="0" fill="#334155" font-size="12.5" font-weight="800" text-anchor="end">وضعیت پوشش</text>
+  </g>
+
+  <!-- Row 1 -->
+  <g transform="translate(0, 510)">
+    <line x1="16" y1="60" x2="984" y2="60" stroke="#f1f5f9" stroke-width="1"/>
+    <text x="948" y="35" fill="#0f172a" font-size="13" font-weight="700" text-anchor="end">Uncategorized •</text>
+    <text x="680" y="35" fill="#475569" font-size="12.5" font-weight="600" text-anchor="end">5 مقاله</text>
+    <text x="480" y="35" fill="#475569" font-size="12.5" font-weight="600" text-anchor="end">0 فرصت</text>
+    <text x="310" y="35" fill="#16a34a" font-size="12.5" font-weight="700" text-anchor="end">0 تأییدشده</text>
+    <rect x="50" y="24" width="100" height="10" class="progress-bg"/>
+    <text x="32" y="34" fill="#64748b" font-size="11" font-weight="700" text-anchor="end">0%</text>
+  </g>
+
+  <!-- Row 2 -->
+  <g transform="translate(0, 580)">
+    <line x1="16" y1="60" x2="984" y2="60" stroke="#f1f5f9" stroke-width="1"/>
+    <text x="948" y="35" fill="#0f172a" font-size="13" font-weight="700" text-anchor="end">بقا در طبیعت •</text>
+    <text x="680" y="35" fill="#475569" font-size="12.5" font-weight="600" text-anchor="end">2 مقاله</text>
+    <text x="480" y="35" fill="#475569" font-size="12.5" font-weight="600" text-anchor="end">3 فرصت</text>
+    <text x="310" y="35" fill="#16a34a" font-size="12.5" font-weight="700" text-anchor="end">0 تأییدشده</text>
+    <rect x="50" y="24" width="100" height="10" class="progress-bg"/>
+    <text x="32" y="34" fill="#64748b" font-size="11" font-weight="700" text-anchor="end">0%</text>
+  </g>
+
+  <!-- Row 3 -->
+  <g transform="translate(0, 650)">
+    <line x1="16" y1="60" x2="984" y2="60" stroke="#f1f5f9" stroke-width="1"/>
+    <text x="948" y="35" fill="#0f172a" font-size="13" font-weight="700" text-anchor="end">تجهیزات سفر •</text>
+    <text x="680" y="35" fill="#475569" font-size="12.5" font-weight="600" text-anchor="end">3 مقاله</text>
+    <text x="480" y="35" fill="#475569" font-size="12.5" font-weight="600" text-anchor="end">4 فرصت</text>
+    <text x="310" y="35" fill="#16a34a" font-size="12.5" font-weight="700" text-anchor="end">1 تأییدشده</text>
+    <rect x="50" y="24" width="100" height="10" class="progress-bg"/>
+    <rect x="125" y="24" width="25" height="10" class="progress-fill"/>
+    <text x="32" y="34" fill="#2563eb" font-size="11" font-weight="800" text-anchor="end">25%</text>
+  </g>
+
+  <!-- Row 4 -->
+  <g transform="translate(0, 720)">
+    <line x1="16" y1="60" x2="984" y2="60" stroke="#f1f5f9" stroke-width="1"/>
+    <text x="948" y="35" fill="#0f172a" font-size="13" font-weight="700" text-anchor="end">تکنیک‌های طبیعت‌گردی •</text>
+    <text x="680" y="35" fill="#475569" font-size="12.5" font-weight="600" text-anchor="end">4 مقاله</text>
+    <text x="480" y="35" fill="#475569" font-size="12.5" font-weight="600" text-anchor="end">3 فرصت</text>
+    <text x="310" y="35" fill="#16a34a" font-size="12.5" font-weight="700" text-anchor="end">0 تأییدشده</text>
+    <rect x="50" y="24" width="100" height="10" class="progress-bg"/>
+    <text x="32" y="34" fill="#64748b" font-size="11" font-weight="700" text-anchor="end">0%</text>
+  </g>
+
+  <!-- Row 5 -->
+  <g transform="translate(0, 790)">
+    <text x="948" y="35" fill="#0f172a" font-size="13" font-weight="700" text-anchor="end">مقاصد گردشگری •</text>
+    <text x="680" y="35" fill="#475569" font-size="12.5" font-weight="600" text-anchor="end">1 مقاله</text>
+    <text x="480" y="35" fill="#475569" font-size="12.5" font-weight="600" text-anchor="end">5 فرصت</text>
+    <text x="310" y="35" fill="#16a34a" font-size="12.5" font-weight="700" text-anchor="end">0 تأییدشده</text>
+    <rect x="50" y="24" width="100" height="10" class="progress-bg"/>
+    <text x="32" y="34" fill="#64748b" font-size="11" font-weight="700" text-anchor="end">0%</text>
   </g>
 </svg>

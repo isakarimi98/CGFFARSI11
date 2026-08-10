@@ -1,139 +1,107 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 960" width="100%" height="100%">
   <defs>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&amp;display=swap');
       text { font-family: 'Vazirmatn', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; direction: rtl; unicode-bidi: embed; }
-      .bg-app { fill: #f8fafc; }
-      .card { fill: #ffffff; stroke: #cbd5e1; stroke-width: 1; rx: 12px; }
-      .badge-prio-high { fill: #fce7f3; stroke: #f472b6; stroke-width: 0.5; }
-      .badge-prio-mid { fill: #fef9c3; stroke: #fde047; stroke-width: 0.5; }
-      .badge-prio-low { fill: #f1f5f9; stroke: #cbd5e1; stroke-width: 0.5; }
-      .pill-cat { fill: #e0f2fe; stroke: #bae6fd; stroke-width: 0.5; }
-      .pill-kw { fill: #f1f5f9; stroke: #e2e8f0; stroke-width: 0.5; }
-      .btn-approve { fill: #2563eb; rx: 6px; }
-      .btn-reject { fill: #dc2626; rx: 6px; }
+      .bg-app { fill: #f1f3f5; }
+      .card { fill: #ffffff; stroke: #d1d5db; stroke-width: 1; rx: 8px; }
+      .input-box { fill: #ffffff; stroke: #d1d5db; stroke-width: 1; rx: 6px; }
+      .btn-blue { fill: #2563eb; rx: 6px; }
+      .btn-outline { fill: #ffffff; stroke: #2563eb; stroke-width: 1.5; rx: 6px; }
+      .badge-online { fill: #dcfce7; stroke: #86efac; stroke-width: 0.5; }
     </style>
-    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
-      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08"/>
+    <filter id="shadow" x="-3%" y="-3%" width="106%" height="106%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.06"/>
     </filter>
   </defs>
 
   <!-- Background -->
-  <rect width="800" height="800" class="bg-app"/>
+  <rect width="1000" height="960" class="bg-app"/>
 
-  <!-- Top Header -->
-  <rect x="24" y="24" width="752" height="80" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" rx="12" filter="url(#shadow)"/>
-  <g transform="translate(748, 55)">
-    <text x="0" y="0" fill="#0f172a" font-size="18" font-weight="800" text-anchor="end">🔍 لیست فرصت‌های محتوایی کشف‌شده (فعال)</text>
-    <text x="0" y="24" fill="#64748b" font-size="12" font-weight="500" text-anchor="end">نمایش شکاف‌های محتوایی به همراه اولویت، دسته‌بندی و دلیل استراتژیک</text>
-  </g>
+  <!-- Header -->
+  <rect x="16" y="16" width="968" height="90" fill="#ffffff" stroke="#d1d5db" stroke-width="1" rx="8" filter="url(#shadow)"/>
+  
+  <g transform="translate(952, 48)">
+    <text x="0" y="0" fill="#0f172a" font-size="19" font-weight="800" text-anchor="end">⚙️ تنظیمات یابنده شکاف محتوا</text>
 
-  <!-- Toolbar: Search & Exports -->
-  <g transform="translate(24, 120)">
-    <rect x="372" y="0" width="404" height="42" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" rx="8"/>
-    <text x="750" y="26" fill="#94a3b8" font-size="12" font-weight="500" text-anchor="end">🔍 جستجو در عنوان، کلمات کلیدی یا دلیل استراتژیک...</text>
-
-    <rect x="190" y="0" width="165" height="42" fill="#ffffff" stroke="#2563eb" stroke-width="1" rx="8"/>
-    <text x="272" y="26" fill="#2563eb" font-size="12" font-weight="700" text-anchor="middle">📥 خروجی CSV</text>
-
-    <rect x="0" y="0" width="175" height="42" fill="#ffffff" stroke="#2563eb" stroke-width="1" rx="8"/>
-    <text x="87" y="26" fill="#2563eb" font-size="12" font-weight="700" text-anchor="middle">💾 خروجی JSON</text>
-  </g>
-
-  <!-- Table Container -->
-  <rect x="24" y="180" width="752" height="596" class="card" filter="url(#shadow)"/>
-
-  <!-- Table Header -->
-  <rect x="24" y="180" width="752" height="45" fill="#f8fafc" rx="12 12 0 0"/>
-  <line x1="24" y1="225" x2="776" y2="225" stroke="#e2e8f0" stroke-width="1"/>
-
-  <g transform="translate(0, 208)">
-    <text x="750" y="0" fill="#334155" font-size="12" font-weight="800" text-anchor="end">عنوان / موضوع</text>
-    <text x="480" y="0" fill="#334155" font-size="12" font-weight="800" text-anchor="end">دسته‌بندی</text>
-    <text x="360" y="0" fill="#334155" font-size="12" font-weight="800" text-anchor="end">اولویت</text>
-    <text x="230" y="0" fill="#334155" font-size="12" font-weight="800" text-anchor="end">عملیات سریع</text>
-  </g>
-
-  <!-- Card / Item Row 1 -->
-  <g transform="translate(0, 235)">
-    <line x1="24" y1="105" x2="776" y2="105" stroke="#f1f5f9" stroke-width="1"/>
-    <text x="750" y="28" fill="#0f172a" font-size="13" font-weight="800" text-anchor="end">نکات کلیدی برای انتخاب بهترین زمان سفر به کویر</text>
-    <text x="750" y="52" fill="#64748b" font-size="11" font-weight="500" text-anchor="end">دلیل: جذب مخاطبان علاقه‌مند به کویرنوردی در فصل پاییز و زمستان.</text>
-
-    <rect x="420" y="20" width="90" height="24" class="pill-cat" rx="12"/>
-    <text x="465" y="36" fill="#0369a1" font-size="11" font-weight="700" text-anchor="middle">مقاصد گردشگری</text>
-
-    <rect x="315" y="20" width="80" height="24" class="badge-prio-high" rx="12"/>
-    <text x="355" y="36" fill="#9d174d" font-size="11" font-weight="800" text-anchor="middle">بالا (فوری)</text>
-
-    <g transform="translate(140, 18)">
-      <rect width="80" height="30" class="btn-approve"/>
-      <text x="40" y="20" fill="#ffffff" font-size="11" font-weight="700" text-anchor="middle">✓ تایید</text>
-
-      <rect x="-70" y="0" width="60" height="30" class="btn-reject"/>
-      <text x="-40" y="20" fill="#ffffff" font-size="11" font-weight="700" text-anchor="middle">✕ رد</text>
+    <!-- Online Status Pill -->
+    <g transform="translate(-270, -22)">
+      <rect width="210" height="28" class="badge-online" rx="14"/>
+      <circle cx="192" cy="14" r="4" fill="#16a34a"/>
+      <text x="180" y="18" fill="#15803d" font-size="11" font-weight="700" text-anchor="end">ارتباط هوش مصنوعی: آنلاین (OPENROUTER)</text>
     </g>
+
+    <text x="0" y="26" fill="#64748b" font-size="12" font-weight="500" text-anchor="end">پیکربندی کلیدهای API و مدل‌های هوش مصنوعی جهت تحلیل ساختار محتوایی سایت.</text>
   </g>
 
-  <!-- Card / Item Row 2 -->
-  <g transform="translate(0, 350)">
-    <line x1="24" y1="105" x2="776" y2="105" stroke="#f1f5f9" stroke-width="1"/>
-    <text x="750" y="28" fill="#0f172a" font-size="13" font-weight="800" text-anchor="end">آموزش ساخت ابزارهای بقا با استفاده از منابع طبیعی</text>
-    <text x="750" y="52" fill="#64748b" font-size="11" font-weight="500" text-anchor="end">دلیل: غنای بخش بقا در طبیعت و ایجاد لینک‌های داخلی با مقاله اصلی.</text>
+  <!-- Section 1 Card: AI Provider Settings -->
+  <rect x="16" y="122" width="968" height="470" class="card" filter="url(#shadow)"/>
 
-    <rect x="420" y="20" width="90" height="24" class="pill-cat" rx="12"/>
-    <text x="465" y="36" fill="#0369a1" font-size="11" font-weight="700" text-anchor="middle">بقا در طبیعت</text>
-
-    <rect x="315" y="20" width="80" height="24" class="badge-prio-mid" rx="12"/>
-    <text x="355" y="36" fill="#854d0e" font-size="11" font-weight="800" text-anchor="middle">متوسط</text>
-
-    <g transform="translate(140, 18)">
-      <rect width="80" height="30" class="btn-approve"/>
-      <text x="40" y="20" fill="#ffffff" font-size="11" font-weight="700" text-anchor="middle">✓ تایید</text>
-
-      <rect x="-70" y="0" width="60" height="30" class="btn-reject"/>
-      <text x="-40" y="20" fill="#ffffff" font-size="11" font-weight="700" text-anchor="middle">✕ رد</text>
-    </g>
+  <!-- Card 1 Header -->
+  <g transform="translate(948, 156)">
+    <text x="0" y="0" fill="#0f172a" font-size="16" font-weight="800" text-anchor="end">🔀 تنظیمات ارائه‌دهنده هوش مصنوعی</text>
+    <line x1="-910" y1="16" x2="0" y2="16" stroke="#f1f5f9" stroke-width="1"/>
   </g>
 
-  <!-- Card / Item Row 3 -->
-  <g transform="translate(0, 465)">
-    <line x1="24" y1="105" x2="776" y2="105" stroke="#f1f5f9" stroke-width="1"/>
-    <text x="750" y="28" fill="#0f172a" font-size="13" font-weight="800" text-anchor="end">راهنمای انتخاب بهترین زمان برای سفر به جنگل‌های شمال</text>
-    <text x="750" y="52" fill="#64748b" font-size="11" font-weight="500" text-anchor="end">دلیل: پوشش تقاضای بالای کاربران برای سفرهای پاییزی به جنگل.</text>
+  <!-- Field 1: AI Provider Dropdown -->
+  <g transform="translate(16, 195)">
+    <text x="932" y="20" fill="#1e293b" font-size="13.5" font-weight="700" text-anchor="end">ارائه‌دهنده سرویس (AI Provider)</text>
+    
+    <rect x="232" y="32" width="700" height="48" class="input-box"/>
+    <text x="910" y="62" fill="#0f172a" font-size="13.5" font-weight="600" text-anchor="end">OpenRouter (پیش‌فرض)</text>
+    <path d="M255 52l6 6 6-6" stroke="#64748b" stroke-width="2" fill="none"/>
 
-    <rect x="420" y="20" width="90" height="24" class="pill-cat" rx="12"/>
-    <text x="465" y="36" fill="#0369a1" font-size="11" font-weight="700" text-anchor="middle">مقاصد گردشگری</text>
-
-    <rect x="315" y="20" width="80" height="24" class="badge-prio-mid" rx="12"/>
-    <text x="355" y="36" fill="#854d0e" font-size="11" font-weight="800" text-anchor="middle">متوسط</text>
-
-    <g transform="translate(140, 18)">
-      <rect width="80" height="30" class="btn-approve"/>
-      <text x="40" y="20" fill="#ffffff" font-size="11" font-weight="700" text-anchor="middle">✓ تایید</text>
-
-      <rect x="-70" y="0" width="60" height="30" class="btn-reject"/>
-      <text x="-40" y="20" fill="#ffffff" font-size="11" font-weight="700" text-anchor="middle">✕ رد</text>
-    </g>
+    <text x="932" y="102" fill="#64748b" font-size="11.5" font-weight="500" text-anchor="end">سرویس‌دهنده مورد نظر برای استخراج فرصت‌های محتوایی را انتخاب کنید.</text>
   </g>
 
-  <!-- Card / Item Row 4 -->
-  <g transform="translate(0, 580)">
-    <text x="750" y="28" fill="#0f172a" font-size="13" font-weight="800" text-anchor="end">نکات مهم در مورد کمپینگ در مناطق کوهستانی</text>
-    <text x="750" y="52" fill="#64748b" font-size="11" font-weight="500" text-anchor="end">دلیل: راهنمای تخصصی برای علاقه‌مندان به کوهنوردی سنگین.</text>
+  <!-- Field 2: Model Name -->
+  <g transform="translate(16, 325)">
+    <text x="932" y="20" fill="#1e293b" font-size="13.5" font-weight="700" text-anchor="end">مدل هوش مصنوعی (Model)</text>
 
-    <rect x="420" y="20" width="90" height="24" class="pill-cat" rx="12"/>
-    <text x="465" y="36" fill="#0369a1" font-size="11" font-weight="700" text-anchor="middle">تجهیزات سفر</text>
+    <rect x="232" y="32" width="700" height="48" class="input-box"/>
+    <text x="910" y="62" fill="#0f172a" font-size="13.5" font-weight="600" text-anchor="end">OpenAI GPT-4o Mini (openai/gpt-4o-mini)</text>
+    <path d="M255 52l6 6 6-6" stroke="#64748b" stroke-width="2" fill="none"/>
 
-    <rect x="315" y="20" width="80" height="24" class="badge-prio-low" rx="12"/>
-    <text x="355" y="36" fill="#475569" font-size="11" font-weight="800" text-anchor="middle">پایین</text>
+    <text x="932" y="102" fill="#64748b" font-size="11.5" font-weight="500" text-anchor="end">شناسه رسمی API مدل هوش مصنوعی را انتخاب نمایید.</text>
+  </g>
 
-    <g transform="translate(140, 18)">
-      <rect width="80" height="30" class="btn-approve"/>
-      <text x="40" y="20" fill="#ffffff" font-size="11" font-weight="700" text-anchor="middle">✓ تایید</text>
+  <!-- Field 3: API Key Field + Test Button -->
+  <g transform="translate(16, 455)">
+    <text x="932" y="20" fill="#1e293b" font-size="13.5" font-weight="700" text-anchor="end">کلید اختصاصی API (API Key)</text>
 
-      <rect x="-70" y="0" width="60" height="30" class="btn-reject"/>
-      <text x="-40" y="20" fill="#ffffff" font-size="11" font-weight="700" text-anchor="middle">✕ رد</text>
-    </g>
+    <rect x="232" y="32" width="700" height="48" class="input-box"/>
+    <text x="910" y="62" fill="#0f172a" font-size="16" font-weight="800" text-anchor="end" letter-spacing="4">••••••••••••••••••••••••••••••••••••••••</text>
+
+    <!-- Test Button on Left -->
+    <rect x="52" y="32" width="160" height="48" class="btn-outline"/>
+    <text x="132" y="61" fill="#2563eb" font-size="12.5" font-weight="700" text-anchor="middle">🔀 تست اتصال API</text>
+
+    <text x="932" y="102" fill="#64748b" font-size="11.5" font-weight="500" text-anchor="end">کلید API صادر شده از سرویس‌دهنده انتخابی را وارد کنید. کلید به صورت ایمن ذخیره می‌شود.</text>
+  </g>
+
+  <!-- Section 2 Card: Analysis Parameters -->
+  <rect x="16" y="610" width="968" height="230" class="card" filter="url(#shadow)"/>
+
+  <!-- Card 2 Header -->
+  <g transform="translate(948, 644)">
+    <text x="0" y="0" fill="#0f172a" font-size="16" font-weight="800" text-anchor="end">📊 تنظیمات پارامترهای تحلیل</text>
+    <line x1="-910" y1="16" x2="0" y2="16" stroke="#f1f5f9" stroke-width="1"/>
+  </g>
+
+  <!-- Field: Suggestions Count -->
+  <g transform="translate(16, 680)">
+    <text x="932" y="20" fill="#1e293b" font-size="13.5" font-weight="700" text-anchor="end">تعداد پیشنهادها در هر اسکن</text>
+
+    <rect x="532" y="32" width="400" height="48" class="input-box"/>
+    <text x="910" y="62" fill="#0f172a" font-size="13.5" font-weight="600" text-anchor="end">5 پیشنهاد</text>
+    <path d="M555 52l6 6 6-6" stroke="#64748b" stroke-width="2" fill="none"/>
+
+    <text x="932" y="102" fill="#64748b" font-size="11.5" font-weight="500" text-anchor="end">تعداد موضوعات جدیدی که در هر مرحله اسکن و تحلیل توسط مدل به زبان فارسی توصیه می‌شوند.</text>
+  </g>
+
+  <!-- Save Settings Button -->
+  <g transform="translate(36, 868)">
+    <rect width="160" height="50" class="btn-blue" filter="url(#shadow)"/>
+    <text x="80" y="31" fill="#ffffff" font-size="14" font-weight="800" text-anchor="middle">ذخیره تنظیمات</text>
   </g>
 </svg>
