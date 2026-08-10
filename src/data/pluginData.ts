@@ -101,7 +101,7 @@ export const SCREENSHOT_SLOTS: ScreenshotSlot[] = [
     subtitle: 'داشبورد آمار، وضعیت فرصت‌ها و تحلیل دسته‌بندی‌های سایت',
     description: 'نمای خلاصه آمار فرصت‌های محتوایی، پیشنهاد ویژه منتخب با اولویت بالا و وضعیت پوشش موضوعی پست‌های سایت.',
     suggestedDimensions: '800 × 800 پیکسل',
-    imageUrl: './screenshots/screenshot-5.svg',
+    imageUrl: './screenshots/screenshot-1.svg',
   },
   {
     id: 'slot-2',
@@ -110,7 +110,7 @@ export const SCREENSHOT_SLOTS: ScreenshotSlot[] = [
     subtitle: 'پیکربندی کلید API، ارائه‌دهنده سرویس (OpenRouter/OpenAI/Gemini) و مدل AI',
     description: 'نمای تنظیمات افزونه جهت انتخاب ارائه‌دهنده هوش مصنوعی، شناسه مدل، کلید اختصاصی API و تست سریع اتصال.',
     suggestedDimensions: '800 × 800 پیکسل',
-    imageUrl: './screenshots/screenshot-4.svg',
+    imageUrl: './screenshots/screenshot-2.svg',
   },
   {
     id: 'slot-3',
@@ -119,7 +119,7 @@ export const SCREENSHOT_SLOTS: ScreenshotSlot[] = [
     subtitle: 'لیست فرصت‌های محتوایی کشف‌شده (فعال) به همراه اولویت و دسته‌بندی',
     description: 'در این بخش، لیست موضوعات جدید پیشنهادی توسط هوش مصنوعی با درجه اولویت (بالا، متوسط، پایین) و دکمه‌های اقدام سریع قابل مشاهده است.',
     suggestedDimensions: '800 × 800 پیکسل',
-    imageUrl: './screenshots/screenshot-2.svg',
+    imageUrl: './screenshots/screenshot-3.svg',
   },
 ];
 

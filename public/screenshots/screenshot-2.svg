@@ -1,106 +1,96 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 960" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%" style="background-color: #f1f3f5;">
   <defs>
     <style>
-      text { font-family: 'Tahoma', 'Segoe UI', 'Vazirmatn', -apple-system, sans-serif; }
+      @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&amp;display=swap');
+      text { font-family: 'Vazirmatn', 'Segoe UI', Tahoma, sans-serif; direction: rtl; unicode-bidi: embed; }
       .bg-app { fill: #f1f3f5; }
-      .card { fill: #ffffff; stroke: #cbd5e1; stroke-width: 1; rx: 8px; }
+      .card { fill: #ffffff; stroke: #cbd5e1; stroke-width: 1; rx: 10px; }
       .input-box { fill: #ffffff; stroke: #cbd5e1; stroke-width: 1; rx: 6px; }
       .btn-blue { fill: #2563eb; rx: 6px; }
       .btn-outline { fill: #ffffff; stroke: #2563eb; stroke-width: 1.5; rx: 6px; }
       .badge-online { fill: #dcfce7; stroke: #86efac; stroke-width: 0.5; }
     </style>
-    <filter id="shadow" x="-3%" y="-3%" width="106%" height="106%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.06"/>
+    <filter id="shadow" x="-2%" y="-2%" width="104%" height="104%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.05"/>
     </filter>
   </defs>
 
-  <!-- Background -->
-  <rect width="1000" height="960" class="bg-app"/>
+  <rect width="1000" height="1000" class="bg-app"/>
 
-  <!-- Header -->
-  <rect x="16" y="16" width="968" height="90" fill="#ffffff" stroke="#d1d5db" stroke-width="1" rx="8" filter="url(#shadow)"/>
-  
+  <!-- Top Header -->
+  <rect x="16" y="16" width="968" height="90" class="card" filter="url(#shadow)"/>
   <g transform="translate(952, 48)">
     <text x="0" y="0" fill="#0f172a" font-size="19" font-weight="800" text-anchor="end">⚙️ تنظیمات یابنده شکاف محتوا</text>
-
-    <!-- Online Status Pill -->
-    <g transform="translate(-270, -22)">
-      <rect width="210" height="28" class="badge-online" rx="14"/>
-      <circle cx="192" cy="14" r="4" fill="#16a34a"/>
-      <text x="180" y="18" fill="#15803d" font-size="11" font-weight="700" text-anchor="end">ارتباط هوش مصنوعی: آنلاین (OPENROUTER)</text>
-    </g>
-
+    <rect x="-420" y="-18" width="210" height="24" class="badge-online" rx="12"/>
+    <text x="-315" y="-2" fill="#15803d" font-size="11" font-weight="700" text-anchor="middle">ارتباط هوش مصنوعی: آنلاین (OPENROUTER)</text>
     <text x="0" y="26" fill="#64748b" font-size="12" font-weight="500" text-anchor="end">پیکربندی کلیدهای API و مدل‌های هوش مصنوعی جهت تحلیل ساختار محتوایی سایت.</text>
   </g>
 
-  <!-- Section 1 Card: AI Provider Settings -->
-  <rect x="16" y="122" width="968" height="470" class="card" filter="url(#shadow)"/>
-
-  <!-- Card 1 Header -->
-  <g transform="translate(948, 156)">
-    <text x="0" y="0" fill="#0f172a" font-size="16" font-weight="800" text-anchor="end">🔀 تنظیمات ارائه‌دهنده هوش مصنوعی</text>
-    <line x1="-910" y1="16" x2="0" y2="16" stroke="#f1f5f9" stroke-width="1"/>
-  </g>
-
-  <!-- Field 1: AI Provider Dropdown -->
-  <g transform="translate(16, 195)">
-    <text x="932" y="20" fill="#1e293b" font-size="13.5" font-weight="700" text-anchor="end">ارائه‌دهنده سرویس (AI Provider)</text>
+  <!-- Section 1: AI Provider Settings -->
+  <g transform="translate(16, 122)">
+    <rect width="968" height="490" class="card" filter="url(#shadow)"/>
     
-    <rect x="232" y="32" width="700" height="48" class="input-box"/>
-    <text x="910" y="62" fill="#0f172a" font-size="13.5" font-weight="600" text-anchor="end">OpenRouter (پیش‌فرض)</text>
-    <path d="M255 52l6 6 6-6" stroke="#64748b" stroke-width="2" fill="none"/>
+    <g transform="translate(936, 38)">
+      <text x="0" y="0" fill="#0f172a" font-size="16" font-weight="800" text-anchor="end">🔀 تنظیمات ارائه‌دهنده هوش مصنوعی</text>
+    </g>
 
-    <text x="932" y="102" fill="#64748b" font-size="11.5" font-weight="500" text-anchor="end">سرویس‌دهنده مورد نظر برای استخراج فرصت‌های محتوایی را انتخاب کنید.</text>
+    <!-- Field 1: Provider -->
+    <g transform="translate(48, 80)">
+      <text x="888" y="0" fill="#1e293b" font-size="13" font-weight="700" text-anchor="end">ارائه‌دهنده سرویس (AI Provider)</text>
+      <rect x="520" y="12" width="368" height="42" class="input-box"/>
+      <text x="864" y="38" fill="#0f172a" font-size="13" font-weight="600" text-anchor="end">OpenRouter (پیش‌فرض)</text>
+      <text x="540" y="38" fill="#64748b" font-size="12">▼</text>
+      <text x="888" y="74" fill="#64748b" font-size="11.5" font-weight="500" text-anchor="end">سرویس‌دهنده مورد نظر برای استخراج فرصت‌های محتوایی را انتخاب کنید.</text>
+    </g>
+
+    <!-- Field 2: Model -->
+    <g transform="translate(48, 200)">
+      <text x="888" y="0" fill="#1e293b" font-size="13" font-weight="700" text-anchor="end">مدل هوش مصنوعی (Model)</text>
+      <rect x="520" y="12" width="368" height="42" class="input-box"/>
+      <text x="864" y="38" fill="#0f172a" font-size="13" font-weight="600" text-anchor="end">OpenAI GPT-4o Mini (openai/gpt-4o-mini)</text>
+      <text x="540" y="38" fill="#64748b" font-size="12">▼</text>
+      <text x="888" y="74" fill="#64748b" font-size="11.5" font-weight="500" text-anchor="end">شناسه رسمی API مدل هوش مصنوعی را انتخاب نمایید.</text>
+    </g>
+
+    <!-- Field 3: API Key -->
+    <g transform="translate(48, 320)">
+      <text x="888" y="0" fill="#1e293b" font-size="13" font-weight="700" text-anchor="end">کلید اختصاصی API (API Key)</text>
+
+      <g transform="translate(320, 12)">
+        <rect width="568" height="42" class="input-box"/>
+        <text x="548" y="28" fill="#475569" font-size="18" text-anchor="end">••••••••••••••••••••••••••••••••••••••••</text>
+      </g>
+
+      <g transform="translate(170, 12)">
+        <rect width="138" height="42" class="btn-outline"/>
+        <text x="69" y="26" fill="#2563eb" font-size="12" font-weight="800" text-anchor="middle">⚡ تست اتصال API</text>
+      </g>
+
+      <text x="888" y="74" fill="#64748b" font-size="11.5" font-weight="500" text-anchor="end">کلید API صادر شده از سرویس‌دهنده انتخابی را وارد کنید. کلید به صورت ایمن ذخیره می‌شود.</text>
+    </g>
   </g>
 
-  <!-- Field 2: Model Name -->
-  <g transform="translate(16, 325)">
-    <text x="932" y="20" fill="#1e293b" font-size="13.5" font-weight="700" text-anchor="end">مدل هوش مصنوعی (Model)</text>
+  <!-- Section 2: Analysis Parameters -->
+  <g transform="translate(16, 628)">
+    <rect width="968" height="240" class="card" filter="url(#shadow)"/>
+    
+    <g transform="translate(936, 38)">
+      <text x="0" y="0" fill="#0f172a" font-size="16" font-weight="800" text-anchor="end">📊 تنظیمات پارامترهای تحلیل</text>
+    </g>
 
-    <rect x="232" y="32" width="700" height="48" class="input-box"/>
-    <text x="910" y="62" fill="#0f172a" font-size="13.5" font-weight="600" text-anchor="end">OpenAI GPT-4o Mini (openai/gpt-4o-mini)</text>
-    <path d="M255 52l6 6 6-6" stroke="#64748b" stroke-width="2" fill="none"/>
-
-    <text x="932" y="102" fill="#64748b" font-size="11.5" font-weight="500" text-anchor="end">شناسه رسمی API مدل هوش مصنوعی را انتخاب نمایید.</text>
+    <!-- Field 1: Suggestions Count -->
+    <g transform="translate(48, 80)">
+      <text x="888" y="0" fill="#1e293b" font-size="13" font-weight="700" text-anchor="end">تعداد پیشنهادها در هر اسکن</text>
+      <rect x="710" y="12" width="178" height="42" class="input-box"/>
+      <text x="864" y="38" fill="#0f172a" font-size="13" font-weight="600" text-anchor="end">5 پیشنهاد</text>
+      <text x="730" y="38" fill="#64748b" font-size="12">▼</text>
+      <text x="888" y="74" fill="#64748b" font-size="11.5" font-weight="500" text-anchor="end">تعداد موضوعات جدیدی که در هر مرحله اسکن و تحلیل توسط مدل به زبان فارسی توصیه می‌شوند.</text>
+    </g>
   </g>
 
-  <!-- Field 3: API Key Field + Test Button -->
-  <g transform="translate(16, 455)">
-    <text x="932" y="20" fill="#1e293b" font-size="13.5" font-weight="700" text-anchor="end">کلید اختصاصی API (API Key)</text>
-
-    <rect x="232" y="32" width="700" height="48" class="input-box"/>
-    <text x="910" y="62" fill="#0f172a" font-size="16" font-weight="800" text-anchor="end" letter-spacing="4">••••••••••••••••••••••••••••••••••••••••</text>
-
-    <!-- Test Button on Left -->
-    <rect x="52" y="32" width="160" height="48" class="btn-outline"/>
-    <text x="132" y="61" fill="#2563eb" font-size="12.5" font-weight="700" text-anchor="middle">🔀 تست اتصال API</text>
-
-    <text x="932" y="102" fill="#64748b" font-size="11.5" font-weight="500" text-anchor="end">کلید API صادر شده از سرویس‌دهنده انتخابی را وارد کنید. کلید به صورت ایمن ذخیره می‌شود.</text>
-  </g>
-
-  <!-- Section 2 Card: Analysis Parameters -->
-  <rect x="16" y="610" width="968" height="230" class="card" filter="url(#shadow)"/>
-
-  <!-- Card 2 Header -->
-  <g transform="translate(948, 644)">
-    <text x="0" y="0" fill="#0f172a" font-size="16" font-weight="800" text-anchor="end">📊 تنظیمات پارامترهای تحلیل</text>
-    <line x1="-910" y1="16" x2="0" y2="16" stroke="#f1f5f9" stroke-width="1"/>
-  </g>
-
-  <!-- Field: Suggestions Count -->
-  <g transform="translate(16, 680)">
-    <text x="932" y="20" fill="#1e293b" font-size="13.5" font-weight="700" text-anchor="end">تعداد پیشنهادها در هر اسکن</text>
-
-    <rect x="532" y="32" width="400" height="48" class="input-box"/>
-    <text x="910" y="62" fill="#0f172a" font-size="13.5" font-weight="600" text-anchor="end">5 پیشنهاد</text>
-    <path d="M555 52l6 6 6-6" stroke="#64748b" stroke-width="2" fill="none"/>
-
-    <text x="932" y="102" fill="#64748b" font-size="11.5" font-weight="500" text-anchor="end">تعداد موضوعات جدیدی که در هر مرحله اسکن و تحلیل توسط مدل به زبان فارسی توصیه می‌شوند.</text>
-  </g>
-
-  <!-- Save Settings Button -->
-  <g transform="translate(36, 868)">
-    <rect width="160" height="50" class="btn-blue" filter="url(#shadow)"/>
-    <text x="80" y="31" fill="#ffffff" font-size="14" font-weight="800" text-anchor="middle">ذخیره تنظیمات</text>
+  <!-- Save Button Footer -->
+  <g transform="translate(16, 888)">
+    <rect x="818" y="0" width="150" height="46" class="btn-blue"/>
+    <text x="893" y="28" fill="#ffffff" font-size="14" font-weight="800" text-anchor="middle">ذخیره تنظیمات</text>
   </g>
 </svg>

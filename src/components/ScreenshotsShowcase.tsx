@@ -49,10 +49,10 @@ export function ScreenshotsShowcase() {
                 </span>
               </div>
 
-              {/* Clean Image Container - Fits full screenshot without cropping */}
+              {/* Clean Image Container - Fixed 1:1 Square Frame to match screenshot aspect ratio */}
               <div 
                 onClick={() => setActiveModalSlot(slot)}
-                className="relative aspect-square sm:aspect-[4/3] w-full bg-slate-900/5 p-2 flex items-center justify-center overflow-hidden cursor-pointer group border-b border-slate-100"
+                className="relative aspect-square w-full bg-slate-900/5 p-2 flex items-center justify-center overflow-hidden cursor-pointer group border-b border-slate-100"
               >
                 <img
                   src={slot.imageUrl}
@@ -114,13 +114,15 @@ export function ScreenshotsShowcase() {
               {activeModalSlot.subtitle}
             </p>
 
-            {/* High-Res Full Screen Frame */}
-            <div className="rounded-2xl bg-slate-950 p-2 sm:p-4 border border-slate-800 shadow-inner overflow-auto mb-4 flex items-center justify-center min-h-[300px]">
-              <img
-                src={activeModalSlot.imageUrl}
-                alt={activeModalSlot.title}
-                className="w-full h-auto max-h-[75vh] object-contain rounded-xl bg-white shadow-2xl"
-              />
+            {/* High-Res Full Screen Frame - 1:1 Aspect Ratio Preserved */}
+            <div className="rounded-2xl bg-slate-100 p-3 sm:p-5 border border-slate-200 shadow-inner overflow-hidden mb-4 flex items-center justify-center">
+              <div className="relative w-full max-w-[620px] aspect-square mx-auto flex items-center justify-center bg-white rounded-xl shadow-md border border-slate-200/80 p-1">
+                <img
+                  src={activeModalSlot.imageUrl}
+                  alt={activeModalSlot.title}
+                  className="w-full h-full object-contain rounded-lg bg-slate-50"
+                />
+              </div>
             </div>
 
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pt-3 border-t border-slate-100">
