@@ -49,22 +49,22 @@ export function ScreenshotsShowcase() {
                 </span>
               </div>
 
-              {/* Clean Image Container - Fixed 1:1 Square Ratio */}
+              {/* Clean Image Container - Fits full screenshot without cropping */}
               <div 
                 onClick={() => setActiveModalSlot(slot)}
-                className="relative aspect-square w-full bg-slate-50 flex items-center justify-center overflow-hidden cursor-pointer group"
+                className="relative aspect-square sm:aspect-[4/3] w-full bg-slate-900/5 p-2 flex items-center justify-center overflow-hidden cursor-pointer group border-b border-slate-100"
               >
                 <img
                   src={slot.imageUrl}
                   alt={slot.title}
-                  className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.02]"
+                  className="w-full h-full object-contain rounded-lg shadow-2xs transition-transform duration-300 group-hover:scale-[1.01]"
                 />
                 
                 {/* Clean Hover Overlay with Zoom Button */}
-                <div className="absolute inset-0 bg-slate-900/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <div className="px-4 py-2 rounded-xl bg-white/95 backdrop-blur-xs text-slate-900 shadow-md flex items-center gap-2 text-xs font-bold transform translate-y-2 group-hover:translate-y-0 transition-transform">
+                <div className="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4">
+                  <div className="px-4 py-2.5 rounded-xl bg-white text-slate-900 shadow-xl flex items-center gap-2 text-xs font-bold border border-slate-200 transform translate-y-2 group-hover:translate-y-0 transition-transform">
                     <Maximize2 className="w-4 h-4 text-sky-600" />
-                    <span>مشاهده تصویر کامل</span>
+                    <span>مشاهده تصویر کامل با کیفیت بالا</span>
                   </div>
                 </div>
               </div>
@@ -89,51 +89,49 @@ export function ScreenshotsShowcase() {
 
       </div>
 
-      {/* Lightbox / Modal for High-Res View */}
+      {/* Lightbox / Modal for High-Res Full View */}
       {activeModalSlot && (
-        <div className="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-xs flex items-center justify-center p-4">
-          <div className="bg-white rounded-3xl max-w-4xl w-full p-6 sm:p-8 shadow-2xl border border-slate-200 relative animate-in fade-in zoom-in-95 max-h-[92vh] flex flex-col overflow-y-auto">
+        <div className="fixed inset-0 z-50 bg-slate-950/85 backdrop-blur-xs flex items-center justify-center p-3 sm:p-6">
+          <div className="bg-white rounded-3xl max-w-6xl w-full p-5 sm:p-7 shadow-2xl border border-slate-200 relative animate-in fade-in zoom-in-95 max-h-[96vh] flex flex-col overflow-y-auto">
             <button
               onClick={() => setActiveModalSlot(null)}
-              className="absolute top-5 left-5 p-2 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 transition-colors z-10"
+              className="absolute top-5 left-5 p-2 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors z-10 shadow-xs"
               title="بستن"
             >
               <X className="w-5 h-5" />
             </button>
 
-            <div className="flex items-center gap-3 mb-3">
+            <div className="flex items-center gap-3 mb-2">
               <span className="px-3 py-1 rounded-full bg-sky-100 text-sky-800 text-xs font-bold">
-                تصویر محیط افزونه - {activeModalSlot.title}
+                تصویر کامل پیشخوان - {activeModalSlot.title}
               </span>
             </div>
 
             <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-1">
               {activeModalSlot.title}
             </h3>
-            <p className="text-xs sm:text-sm text-slate-600 mb-5">
+            <p className="text-xs sm:text-sm text-slate-600 mb-4">
               {activeModalSlot.subtitle}
             </p>
 
-            {/* Display full screenshot in fixed 1:1 Square Frame */}
-            <div className="rounded-2xl bg-slate-900/5 p-3 border border-slate-200 overflow-hidden mb-6 flex items-center justify-center">
-              <div className="relative w-full max-w-[560px] aspect-square mx-auto flex items-center justify-center bg-white rounded-xl shadow-md border border-slate-200/80 overflow-hidden p-1">
-                <img
-                  src={activeModalSlot.imageUrl}
-                  alt={activeModalSlot.title}
-                  className="w-full h-full object-contain rounded-lg bg-slate-50"
-                />
-              </div>
+            {/* High-Res Full Screen Frame */}
+            <div className="rounded-2xl bg-slate-950 p-2 sm:p-4 border border-slate-800 shadow-inner overflow-auto mb-4 flex items-center justify-center min-h-[300px]">
+              <img
+                src={activeModalSlot.imageUrl}
+                alt={activeModalSlot.title}
+                className="w-full h-auto max-h-[75vh] object-contain rounded-xl bg-white shadow-2xl"
+              />
             </div>
 
-            <div className="flex items-center justify-between gap-3 pt-4 border-t border-slate-100">
-              <p className="text-xs text-slate-500">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pt-3 border-t border-slate-100">
+              <p className="text-xs text-slate-500 leading-relaxed">
                 {activeModalSlot.description}
               </p>
               <button
                 onClick={() => setActiveModalSlot(null)}
-                className="px-6 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-sm font-semibold transition-colors shrink-0"
+                className="px-6 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-sm font-semibold transition-colors shrink-0 self-end sm:self-auto shadow-sm"
               >
-                بستن
+                بستن پنجره
               </button>
             </div>
           </div>
