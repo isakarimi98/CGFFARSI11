@@ -3,7 +3,6 @@ import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { KeyFeatures } from './components/KeyFeatures';
 import { InteractiveWorkflow } from './components/InteractiveWorkflow';
-import { ScreenshotsShowcase } from './components/ScreenshotsShowcase';
 import { InstallationGuide } from './components/InstallationGuide';
 import { FAQSection } from './components/FAQSection';
 import { CTASection } from './components/CTASection';
@@ -28,9 +27,6 @@ export default function App() {
 
         {/* Section 2.5: Interactive Step-by-Step Scan-to-Draft Walkthrough */}
         <InteractiveWorkflow />
-
-        {/* Section 3: Real Plugin Screenshots Showcase (Slots) */}
-        <ScreenshotsShowcase />
 
         {/* Quick Installation Guide in WordPress */}
         <InstallationGuide onCtaClick={() => setDownloadModalOpen(true)} />
