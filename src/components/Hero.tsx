@@ -29,13 +29,13 @@ export function Hero({ onCtaClick }: HeroProps) {
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.25] mb-6">
             <span className="block text-slate-900">{PLUGIN_INFO.name}</span>
             <span className="block text-transparent bg-clip-text bg-gradient-to-l from-sky-600 via-sky-500 to-sky-700 text-2xl sm:text-4xl md:text-5xl font-bold mt-2">
-              تحلیل ساختار سایت و کشف سوژه‌های جدید محتوا
+              {PLUGIN_INFO.title}
             </span>
           </h1>
 
           {/* Subtitle Description */}
           <p className="text-base sm:text-lg md:text-xl text-slate-600 leading-relaxed font-normal max-w-3xl mx-auto mb-10">
-            «ساختار محتوایی سایت وردپرس خود را بررسی کنید، شکاف‌های محتوایی را پیدا کنید و فرصت‌های جدید تولید محتوا را با کمک هوش مصنوعی کشف کنید.»
+            «{PLUGIN_INFO.shortDesc}»
           </p>
 
           {/* CTA Buttons */}
@@ -50,10 +50,10 @@ export function Hero({ onCtaClick }: HeroProps) {
             </a>
 
             <a
-              href="#screenshots"
+              href="#features"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl text-base font-semibold text-slate-700 bg-white hover:bg-sky-50/60 border border-slate-200 hover:border-sky-300 transition-all duration-200 shadow-2xs"
             >
-              <span>مشاهده محیط واقعی افزونه</span>
+              <span>{PLUGIN_INFO.secondaryCta}</span>
             </a>
           </div>
 

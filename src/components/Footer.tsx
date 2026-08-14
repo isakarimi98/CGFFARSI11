@@ -14,7 +14,7 @@ export function Footer() {
             </div>
             <div>
               <span className="font-bold text-white text-base block">{PLUGIN_INFO.name}</span>
-              <span className="text-xs text-slate-400">افزونه معرفی فرصت‌های محتوایی برای وردپرس</span>
+              <span className="text-xs text-slate-400">{PLUGIN_INFO.title} برای وردپرس</span>
             </div>
           </div>
 
@@ -22,7 +22,7 @@ export function Footer() {
           <div className="flex flex-wrap justify-center items-center gap-6 text-xs text-slate-400 font-medium">
             <a href="#hero" className="hover:text-white transition-colors">معرفی</a>
             <a href="#features" className="hover:text-white transition-colors">ویژگی‌های کلیدی</a>
-            <a href="#screenshots" className="hover:text-white transition-colors">تصاویر واقعی افزونه</a>
+            <a href="#workflow" className="hover:text-white transition-colors">فرآیند تعاملی</a>
             <a href="#installation" className="hover:text-white transition-colors">راهنمای نصب</a>
             <a href="#faq" className="hover:text-white transition-colors">سوالات متداول</a>
           </div>
@@ -32,7 +32,7 @@ export function Footer() {
         {/* Bottom copyright */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <p>
-            صفحه رسمی معرفی افزونه {PLUGIN_INFO.name} • نسخه {PLUGIN_INFO.version}
+            صفحه رسمی معرفی افزونه {PLUGIN_INFO.name} ({PLUGIN_INFO.title}) • نسخه {PLUGIN_INFO.version}
           </p>
           <div className="flex items-center gap-1 text-slate-400">
             <span>طراحی‌شده برای مدیریت بهتر محتوای وردپرس</span>

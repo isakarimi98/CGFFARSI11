@@ -54,7 +54,7 @@ export function Header({ onCtaClick }: HeaderProps) {
                 </span>
               </div>
               <span className="text-[11px] font-medium text-slate-500 mt-0.5 hidden sm:block">
-                کشف هوشمند فرصت‌ها و شکاف‌های محتوا
+                {PLUGIN_INFO.title}
               </span>
             </div>
           </a>

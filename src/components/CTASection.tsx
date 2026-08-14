@@ -23,7 +23,7 @@ export function CTASection({ onCtaClick }: CTASectionProps) {
         </h2>
 
         <p className="text-sky-100 text-base sm:text-lg max-w-2xl mx-auto mb-10 font-normal leading-relaxed">
-          با نصب افزونه «کشف فرصت‌های محتوا»، ساختار سایت را تحلیل کنید، سوژه‌های جدید را بیابید و آن‌ها را مستقیماً به پیش‌نویس وردپرس تبدیل کنید.
+          با نصب افزونه «{PLUGIN_INFO.name}» ({PLUGIN_INFO.title})، ساختار سایت را تحلیل کنید، سوژه‌های جدید را بیابید و آن‌ها را مستقیماً به پیش‌نویس وردپرس تبدیل کنید.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">

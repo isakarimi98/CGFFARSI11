@@ -28,13 +28,13 @@ export function PluginDownloadModal({ isOpen, onClose }: PluginDownloadModalProp
   const handleSimulatedDownload = () => {
     setDownloaded(true);
     // Create a dummy text blob representing the plugin package info for user test download
-    const blob = new Blob([`Plugin Name: ${PLUGIN_INFO.name}\nVersion: ${PLUGIN_INFO.version}\nWordPress: ${PLUGIN_INFO.wpVersion}`], {
+    const blob = new Blob([`Plugin Name: ${PLUGIN_INFO.name}\nTitle: ${PLUGIN_INFO.title}\nVersion: ${PLUGIN_INFO.version}\nWordPress: ${PLUGIN_INFO.wpVersion}`], {
       type: 'text/plain;charset=utf-8',
     });
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = 'content-opportunity-discovery-plugin.txt';
+    link.download = 'seonama-content-assistant-plugin.txt';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -62,6 +62,7 @@ export function PluginDownloadModal({ isOpen, onClose }: PluginDownloadModalProp
             <h3 className="text-2xl font-extrabold text-slate-900 leading-tight">
               {PLUGIN_INFO.name}
             </h3>
+            <span className="text-xs text-slate-500 font-medium">{PLUGIN_INFO.title}</span>
           </div>
         </div>
 

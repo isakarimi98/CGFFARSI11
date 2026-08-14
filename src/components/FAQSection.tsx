@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FAQ_ITEMS } from '../data/pluginData';
+import { FAQ_ITEMS, PLUGIN_INFO } from '../data/pluginData';
 import { ChevronDown, HelpCircle } from 'lucide-react';
 
 export function FAQSection() {
@@ -22,7 +22,7 @@ export function FAQSection() {
             سوالات متداول
           </h2>
           <p className="text-slate-600 text-base sm:text-lg font-normal">
-            پاسخ به سوالات رایج درباره افزونه کشف فرصت‌های محتوا در وردپرس
+            پاسخ به سوالات رایج درباره افزونه {PLUGIN_INFO.name} ({PLUGIN_INFO.title}) در وردپرس
           </p>
         </div>
 
