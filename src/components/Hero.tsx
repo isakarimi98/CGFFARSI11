@@ -1,5 +1,5 @@
 import { PLUGIN_INFO } from '../data/pluginData';
-import { ArrowLeft, Sparkles, CheckCircle2, ShieldCheck, Cpu, Search, Layers, RefreshCw } from 'lucide-react';
+import { ArrowLeft, Sparkles, CheckCircle2, ShieldCheck, Cpu, Search, Layers, RefreshCw, BookOpen, ShoppingBag } from 'lucide-react';
 
 interface HeroProps {
   onCtaClick: () => void;
@@ -26,17 +26,49 @@ export function Hero({ onCtaClick }: HeroProps) {
           </div>
 
           {/* Plugin Title */}
-          <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.25] mb-6">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.25] mb-8">
             <span className="block text-slate-900">{PLUGIN_INFO.name}</span>
             <span className="block text-transparent bg-clip-text bg-gradient-to-l from-sky-600 via-sky-500 to-sky-700 text-2xl sm:text-4xl md:text-5xl font-bold mt-2">
               {PLUGIN_INFO.title}
             </span>
           </h1>
 
-          {/* Subtitle Description */}
-          <p className="text-base sm:text-lg md:text-xl text-slate-600 leading-relaxed font-normal max-w-3xl mx-auto mb-10">
-            «{PLUGIN_INFO.shortDesc}»
-          </p>
+          {/* Dual Target Audience Value Proposition Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 max-w-3xl mx-auto mb-10 text-right">
+            {/* For Content Sites */}
+            <div className="p-5 sm:p-6 rounded-2xl bg-white/90 border border-sky-100/90 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between">
+              <div>
+                <div className="flex items-center gap-2 mb-3">
+                  <div className="w-8 h-8 rounded-lg bg-sky-100/80 text-sky-700 flex items-center justify-center">
+                    <BookOpen className="w-4 h-4" />
+                  </div>
+                  <span className="text-xs sm:text-sm font-bold text-sky-800 bg-sky-50 px-2.5 py-1 rounded-md border border-sky-200/60">
+                    برای سایت‌های محتوایی
+                  </span>
+                </div>
+                <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
+                  «با افزونه سئونما، ساختار محتوایی سایت وردپرس خود را بررسی کنید، شکاف‌های محتوایی را پیدا کنید و فرصت‌های جدید تولید محتوا را با کمک هوش مصنوعی کشف کنید.»
+                </p>
+              </div>
+            </div>
+
+            {/* For Store / Ecommerce Sites */}
+            <div className="p-5 sm:p-6 rounded-2xl bg-white/90 border border-amber-100/90 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between">
+              <div>
+                <div className="flex items-center gap-2 mb-3">
+                  <div className="w-8 h-8 rounded-lg bg-amber-100/80 text-amber-700 flex items-center justify-center">
+                    <ShoppingBag className="w-4 h-4" />
+                  </div>
+                  <span className="text-xs sm:text-sm font-bold text-amber-800 bg-amber-50 px-2.5 py-1 rounded-md border border-amber-200/60">
+                    برای سایت‌های فروشگاهی
+                  </span>
+                </div>
+                <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
+                  «فرصت‌های فروش پنهان سایتتان را کشف کنید و با محتوای مرتبط و با کیفیت فروشتان را افزایش دهید.»
+                </p>
+              </div>
+            </div>
+          </div>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
