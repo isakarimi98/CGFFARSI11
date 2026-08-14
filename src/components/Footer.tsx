@@ -20,7 +20,7 @@ export function Footer() {
 
           {/* Nav */}
           <div className="flex flex-wrap justify-center items-center gap-6 text-xs text-slate-400 font-medium">
-            <a href="#hero" className="hover:text-white transition-colors">معرفی</a>
+            <a href="#intro" className="hover:text-white transition-colors">معرفی افزونه</a>
             <a href="#features" className="hover:text-white transition-colors">ویژگی‌های کلیدی</a>
             <a href="#workflow" className="hover:text-white transition-colors">فرآیند تعاملی</a>
             <a href="#installation" className="hover:text-white transition-colors">راهنمای نصب</a>

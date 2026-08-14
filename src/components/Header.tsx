@@ -19,7 +19,7 @@ export function Header({ onCtaClick }: HeaderProps) {
   }, []);
 
   const navLinks = [
-    { name: 'معرفی افزونه', href: '#hero', icon: <Info className="w-4 h-4 text-sky-600 group-hover:scale-110 transition-transform" /> },
+    { name: 'معرفی افزونه', href: '#intro', icon: <Info className="w-4 h-4 text-sky-600 group-hover:scale-110 transition-transform" /> },
     { name: 'ویژگی‌های کلیدی', href: '#features', icon: <Sparkles className="w-4 h-4 text-amber-500 group-hover:scale-110 transition-transform" /> },
     { name: 'راهنمای نصب', href: '#installation', icon: <Wrench className="w-4 h-4 text-emerald-600 group-hover:scale-110 transition-transform" /> },
     { name: 'سوالات متداول', href: '#faq', icon: <HelpCircle className="w-4 h-4 text-indigo-600 group-hover:scale-110 transition-transform" /> },

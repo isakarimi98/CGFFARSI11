@@ -1,8 +1,8 @@
-import { QUICK_STEPS } from '../data/pluginData';
-import { Download, Key, Search, ArrowLeft } from 'lucide-react';
+import { PLUGIN_INFO, QUICK_STEPS } from '../data/pluginData';
+import { Download, Key, Search, ShoppingBag, ExternalLink, ArrowLeft } from 'lucide-react';
 
 interface InstallationGuideProps {
-  onCtaClick: () => void;
+  onCtaClick?: () => void;
 }
 
 export function InstallationGuide({ onCtaClick }: InstallationGuideProps) {
@@ -64,16 +64,20 @@ export function InstallationGuide({ onCtaClick }: InstallationGuideProps) {
         </div>
 
         <div className="mt-12 text-center">
-          <button
-            onClick={onCtaClick}
-            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-bold text-white bg-sky-600 hover:bg-sky-500 shadow-md transition-all hover:-translate-y-0.5"
+          <a
+            href={PLUGIN_INFO.zhaketPurchaseUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-3 px-8 py-4 rounded-xl font-extrabold text-base text-white bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 hover:from-amber-400 hover:to-orange-500 shadow-lg shadow-orange-500/25 hover:shadow-xl hover:shadow-orange-500/35 border border-amber-300/40 transition-all duration-300 hover:-translate-y-0.5 active:scale-98"
           >
-            <span>دانلود و شروع کار با افزونه</span>
-            <ArrowLeft className="w-4 h-4" />
-          </button>
+            <ShoppingBag className="w-5 h-5 text-amber-100 group-hover:rotate-12 transition-transform duration-300" />
+            <span>خرید از ژاکت</span>
+            <ExternalLink className="w-4 h-4 text-amber-200 group-hover:translate-x-0.5 transition-transform" />
+          </a>
         </div>
 
       </div>
     </section>
   );
 }
+

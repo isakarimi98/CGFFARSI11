@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
+import { PluginIntroduction } from './components/PluginIntroduction';
 import { KeyFeatures } from './components/KeyFeatures';
 import { InteractiveWorkflow } from './components/InteractiveWorkflow';
 import { InstallationGuide } from './components/InstallationGuide';
@@ -19,8 +20,11 @@ export default function App() {
       <Header onCtaClick={() => setDownloadModalOpen(true)} />
 
       <main>
-        {/* Section 1: Hero & Product Intro */}
+        {/* Section 1: Hero */}
         <Hero onCtaClick={() => setDownloadModalOpen(true)} />
+
+        {/* Section 1.5: Detailed Introduction to Plugin */}
+        <PluginIntroduction />
 
         {/* Section 2: Key Features */}
         <KeyFeatures />
@@ -41,7 +45,7 @@ export default function App() {
       {/* Footer */}
       <Footer />
 
-      {/* Floating Sticky Rastchin Purchase Button */}
+      {/* Floating Sticky Rastchin / Zhaket Purchase Button */}
       <FloatingBuyButton />
 
       {/* Download / Getting Started Modal */}

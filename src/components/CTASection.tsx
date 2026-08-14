@@ -1,8 +1,8 @@
 import { PLUGIN_INFO } from '../data/pluginData';
-import { ArrowLeft, CheckCircle2, ShieldCheck, Sparkles } from 'lucide-react';
+import { ArrowLeft, CheckCircle2, ShieldCheck, Sparkles, ShoppingBag, ExternalLink } from 'lucide-react';
 
 interface CTASectionProps {
-  onCtaClick: () => void;
+  onCtaClick?: () => void;
 }
 
 export function CTASection({ onCtaClick }: CTASectionProps) {
@@ -15,11 +15,11 @@ export function CTASection({ onCtaClick }: CTASectionProps) {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 text-sky-100 text-xs font-semibold mb-6 backdrop-blur-xs">
           <Sparkles className="w-4 h-4 text-sky-200" />
-          <span>آماده ارتقای استراتژی محتوای وردپرس</span>
+          <span>آماده ارتقای استراتژی محتوا و فروش در وردپرس</span>
         </div>
 
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mb-6 leading-tight">
-          فرصت‌های پنهان محتوای سایت خود را همین امروز کشف کنید
+          فرصت‌های پنهان محتوا و فروش سایت خود را همین امروز کشف کنید
         </h2>
 
         <p className="text-sky-100 text-base sm:text-lg max-w-2xl mx-auto mb-10 font-normal leading-relaxed">
@@ -27,6 +27,17 @@ export function CTASection({ onCtaClick }: CTASectionProps) {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
+          <a
+            href={PLUGIN_INFO.zhaketPurchaseUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl text-base font-extrabold text-white bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 hover:from-amber-400 hover:to-orange-500 shadow-xl shadow-orange-500/30 border border-amber-300/40 hover:-translate-y-0.5 active:scale-98 transition-all duration-300"
+          >
+            <ShoppingBag className="w-5 h-5 text-amber-100" />
+            <span>خرید از ژاکت</span>
+            <ExternalLink className="w-4 h-4 text-amber-200" />
+          </a>
+
           <a
             href="#workflow"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl text-base font-extrabold text-sky-900 bg-white hover:bg-sky-50 active:bg-sky-100 shadow-xl transition-all hover:-translate-y-0.5"
