@@ -4,6 +4,7 @@ export interface FeatureItem {
   description: string;
   iconName: string;
   badge?: string;
+  category: 'content-seo' | 'sales-ecommerce' | 'workflow-management' | 'ai-tech';
   highlighted?: boolean;
 }
 
